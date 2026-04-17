@@ -95,6 +95,19 @@ h1 .bl{color:#0057FF;}
 .dt{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#0d1b2a;margin-bottom:8px;line-height:1.25;}
 .dd{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
 
+/* PROMISE STRIP */
+.promise-strip{background:#0d1b2a;padding:56px 56px;}
+.promise-strip-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.ps-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:32px;display:flex;gap:18px;align-items:flex-start;}
+.ps-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.ps-icon.teal{background:#0ABFBF;}
+.ps-icon.blue{background:#0057FF;}
+.ps-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+.ps-tag.teal{color:#0ABFBF;}
+.ps-tag.blue{color:#4d8eff;}
+.ps-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25;}
+.ps-desc{font-size:13px;color:#94a3b8;line-height:1.65;font-weight:300;}
+
 /* CASES */
 .css{background:#f6f8fc;padding:78px 56px;}
 .csi{max-width:1140px;margin:0 auto;}
@@ -131,13 +144,120 @@ footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;just
 .fl a{font-size:13px;color:#4a5a6b;text-decoration:none;transition:color .15s;}
 .fl a:hover{color:#fff;}
 .fc{font-size:12px;color:#4a5a6b;}
+
+
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+  .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
+  .mobile-menu a:hover{color:#0057FF;}
+  .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+  .mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+  @media(max-width:768px){.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}}
+  /* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  nav{padding:14px 20px;flex-wrap:wrap;gap:12px;}
+  nav svg{width:130px;height:30px;}
+  .nav-links{display:none;}
+  .nav-right{gap:8px;}
+  .btn-ghost-sm{padding:8px 14px;font-size:12px;}
+  .btn-blue{padding:8px 14px;font-size:12px;}
+
+  .hero{padding:48px 20px 40px;grid-template-columns:1fr!important;gap:32px!important;text-align:center;}
+  h1{font-size:36px!important;letter-spacing:-1px!important;margin-left:auto;margin-right:auto;}
+  h1 .bl{display:inline;}
+  .hero-sub,.hero-sub p{font-size:15px!important;max-width:100%!important;}
+  .btns{justify-content:center;flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  .hero-stats{grid-template-columns:1fr 1fr!important;}
+  .hero-card{padding:24px;}
+  .hc-bar{flex-wrap:wrap;gap:16px;}
+
+  .stats-row{flex-wrap:wrap;margin:0;}
+  .stat-cell{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+  .sc{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+
+  .ticker{padding:12px 0;}
+  .ti{padding:0 16px;font-size:11px;}
+
+  .section{padding:48px 20px;}
+  .sec,.tech-section,.svc-section,.ds,.diff-section,.cases-section,.css,.faq,.team,.values,.story,.founder-inner,.about-inner,.culture{padding:48px 20px!important;}
+  .exp-grid{grid-template-columns:1fr!important;}
+  .ind-grid{grid-template-columns:1fr!important;}
+  .caps-grid{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr 1fr!important;}
+  .tech-grid{grid-template-columns:1fr 1fr!important;}
+  .dg,.diff-grid{grid-template-columns:1fr!important;}
+  .csg,.cases-grid{grid-template-columns:1fr!important;}
+  .models-grid{grid-template-columns:1fr!important;}
+  .faq-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr 1fr!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .cs-grid{grid-template-columns:1fr!important;}
+
+  .story-inner,.qi,.aii,.aii,.how-inner,.bring-inner,.culture-inner,.promise-strip-inner,.ai-feature,.hero,.ctas,.cta-section .cta-inner,.svc-block,.svc-block.reverse,.founder-inner{grid-template-columns:1fr!important;direction:ltr!important;}
+  .svc-block{padding:40px 0!important;}
+  .ai-feature{padding:32px 20px!important;}
+  .af-title{font-size:26px!important;}
+
+  .stitle,.sec-title,.qqt,.atitle,.bring-title,.culture-title,.ctat,.ctat,.founder-name{font-size:28px!important;letter-spacing:-.5px!important;}
+  .ssub,.sec-sub,.hero-sub{max-width:100%!important;}
+
+  .promise-strip{padding:48px 20px!important;}
+  .promise-strip-inner{grid-template-columns:1fr!important;}
+  .ps-card{flex-direction:column;}
+
+  .qs{padding:48px 20px!important;}
+  .qi{grid-template-columns:1fr!important;}
+
+  .divr{padding:28px 20px;}
+
+  .cta-section{padding:48px 20px!important;}
+  .cta-inner,.ctas{grid-template-columns:1fr!important;gap:32px!important;padding:48px 20px!important;}
+  .ctat{font-size:28px!important;}
+  .cta-btns,.ctab{flex-direction:column;align-items:center;}
+  .btn-white,.btn-outline-white,.btn-p,.btn-g{width:100%;max-width:320px;}
+
+  .main{grid-template-columns:1fr!important;padding:0 20px 48px!important;}
+  .right-col{gap:16px;}
+
+  .founder-inner{grid-template-columns:1fr!important;gap:28px!important;text-align:center;}
+  .founder-avatar{margin:0 auto;}
+  .founder-creds{justify-content:center;}
+
+  .culture-stats{gap:12px;}
+  .culture-stat{padding:18px 20px;}
+
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}
+
+  .lbl{font-size:11px;}
+  .book-card{padding:24px;}
+  .contact-card,.promise-card{padding:24px;}
+
+  .ai-section,.ais{padding:48px 20px!important;}
+}
+
+@media(max-width:480px){
+  h1{font-size:30px!important;}
+  .hero-stats{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr!important;}
+  .tech-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr!important;}
+  .hc-bar{flex-direction:column;gap:12px;}
+  .cs-metrics{flex-direction:column;}
+  .cs-metric{border-right:none;border-bottom:1px solid #e4e9f0;}
+  .cs-metric:last-child{border-bottom:none;}
+}
+/* ===== END MOBILE ===== */
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
     <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
     <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
     <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
@@ -150,14 +270,36 @@ footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;just
     <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
     <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
   </svg>
-  <ul class="nav-links">
-    <li>Services</li><li>AI Engineering</li><li>Technologies</li><li>Industries</li><li>Case Studies</li><li>About</li>
+    <ul class="nav-links">
+    <li onclick="location.href='services.html'" class="">Services</li>
+    <li onclick="location.href='ai-engineering.html'" class="">AI Engineering</li>
+    <li onclick="location.href='technologies.html'" class="">Technologies</li>
+    <li onclick="location.href='industries.html'" class="">Industries</li>
+    <li onclick="location.href='case-studies.html'" class="">Case Studies</li>
+    <li onclick="location.href='about.html'" class="">About</li>
   </ul>
   <div class="nav-right">
-    <button class="btn-ghost-sm">Our work</button>
-    <button class="btn-blue">Book a call</button>
+    <button class="btn-ghost-sm" onclick="location.href='case-studies.html'">Our work</button>
+    <button class="btn-blue" onclick="location.href='contact.html'">Book a call</button>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a>
+  <a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-cta" onclick="location.href='contact.html'">Book a free call</button>
+</div>
 
 <!-- HERO -->
 <section style="background:#fff;padding-bottom:0;">
@@ -197,7 +339,7 @@ footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;just
 <!-- STATS -->
 <div class="stats">
   <div class="sc"><div class="sn">300+</div><div class="sl">Engineers placed</div></div>
-  <div class="sc"><div class="sn">8+ yrs</div><div class="sl">US market presence</div></div>
+  <div class="sc"><div class="sn">11+ yrs</div><div class="sl">US market presence</div></div>
   <div class="sc"><div class="sn">15+</div><div class="sl">Industries served</div></div>
   <div class="sc"><div class="sn">AI</div><div class="sl">Agents in production</div></div>
 </div>
@@ -268,10 +410,32 @@ footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;just
   <div class="dg">
     <div class="dc"><div class="dn">01</div><div class="dt">Forward-deployed engineers</div><div class="dd">Our teams embed inside your organization, understand the context, and build with long-term thinking — not just sprint-to-sprint execution.</div></div>
     <div class="dc"><div class="dn">02</div><div class="dt">AI-ready by default</div><div class="dd">We're already building production AI for enterprises. Every engagement benefits from what we're learning at the frontier of real-world AI deployment.</div></div>
-    <div class="dc"><div class="dn">03</div><div class="dt">A standard of quality that shows</div><div class="dd">Transparency, ownership, and engineering discipline — the three things that define how we work and why our clients stay.</div></div>
-    <div class="dc"><div class="dn">04</div><div class="dt">Agile by design</div><div class="dd">We work in sprints, ship in iterations, and adapt fast. Your priorities change — our process is built to keep up without losing momentum.</div></div>
-    <div class="dc"><div class="dn">05</div><div class="dt">US-aligned communication</div><div class="dd">Your team is reachable and responsive on your schedule. No lag cycles, no translation layers — just a team that works like yours.</div></div>
+    <div class="dc"><div class="dn">03</div><div class="dt">A dedicated PM — at no cost</div><div class="dd">Every client gets a dedicated Project Manager included at no extra charge. One person to call, one person who knows your project, every single day.</div></div>
+    <div class="dc"><div class="dn">04</div><div class="dt">Walk away in weeks, not months</div><div class="dd">Not satisfied? Terminate with just a few weeks of notice — no penalties, no long wind-downs. We offer this because we are confident in our work.</div></div>
+    <div class="dc"><div class="dn">05</div><div class="dt">Agile by design</div><div class="dd">We work in sprints, ship in iterations, and adapt fast. Your priorities change — our process is built to keep up without losing momentum.</div></div>
     <div class="dc"><div class="dn">06</div><div class="dt">Engineers who take ownership</div><div class="dd">Our engineers flag problems before they become yours. They suggest improvements and show up like employees — not contractors.</div></div>
+  </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise-strip">
+  <div class="promise-strip-inner">
+    <div class="ps-card">
+      <div class="ps-icon teal">◎</div>
+      <div>
+        <div class="ps-tag teal">Included at no cost</div>
+        <div class="ps-title">A dedicated Project Manager from day one</div>
+        <div class="ps-desc">Every C3S client gets a dedicated PM at no extra charge — your single point of contact for communication, updates, and day-to-day coordination. You always know where things stand.</div>
+      </div>
+    </div>
+    <div class="ps-card">
+      <div class="ps-icon blue">⚡</div>
+      <div>
+        <div class="ps-tag blue">Our confidence guarantee</div>
+        <div class="ps-title">Not happy? Walk away in weeks — not months</div>
+        <div class="ps-desc">We don't lock you into long contracts. If we're not delivering to your standard, terminate with just a few weeks of notice. No penalties. We offer this because we back our work completely.</div>
+      </div>
+    </div>
   </div>
 </section>
 
