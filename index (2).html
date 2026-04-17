@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3S Software — Forward-Deployed AI & Software Engineering</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta property="og:title" content="C3S Software — Forward-Deployed AI & Software Engineering">
+<meta property="og:description" content="Senior engineering teams embedded inside US companies — building production AI, modern software, and infrastructure to scale.">
+<meta property="og:image" content="https://www.c3sservices.com/og-image.png">
+<meta property="og:url" content="https://www.c3sservices.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Epilogue',sans-serif;color:#0d1b2a;background:#fff;overflow-x:hidden;}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;border-bottom:1px solid #e4e9f0;background:#fff;position:sticky;top:0;z-index:100;}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:14px;color:#4a5a6b;}
+.nav-links li{cursor:pointer;transition:color .15s;}
+.nav-links li:hover{color:#0057FF;}
+.nav-right{display:flex;gap:12px;}
+.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Epilogue',sans-serif;transition:border-color .15s;}
+.btn-ghost-sm:hover{border-color:#0057FF;}
+.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* HERO */
+.hero{padding:88px 56px 72px;max-width:1140px;margin:0 auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:28px;letter-spacing:.6px;text-transform:uppercase;}
+.dot{width:7px;height:7px;border-radius:50%;background:#0057FF;animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:56px;font-weight:800;line-height:1.06;letter-spacing:-2px;color:#0d1b2a;margin-bottom:22px;max-width:820px;margin-left:auto;margin-right:auto;}
+h1 .bl{color:#0057FF;}
+.hero-sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:580px;margin:0 auto 38px;}
+.btns{display:flex;gap:14px;justify-content:center;}
+.btn-p{background:#0057FF;color:#fff;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-g{background:transparent;color:#0d1b2a;border:1.5px solid #c8d2de;padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-g:hover{border-color:#0057FF;}
+
+/* TICKER */
+.ticker{background:#0d1b2a;padding:15px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-flex;animation:sc 26s linear infinite;}
+.ti{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;padding:0 30px;}
+.ts{color:#0057FF;font-size:16px;align-self:center;}
+@keyframes sc{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* STATS */
+.stats{display:flex;justify-content:center;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
+.sc{flex:1;text-align:center;padding:30px 20px;border-right:1px solid #e4e9f0;max-width:220px;}
+.sc:last-child{border-right:none;}
+.sn{font-family:'Plus Jakarta Sans',sans-serif;font-size:34px;font-weight:800;color:#0d1b2a;letter-spacing:-1px;}
+.sl{font-size:11px;color:#7a8fa6;text-transform:uppercase;letter-spacing:.7px;margin-top:4px;font-weight:500;}
+
+/* EXPERTISE */
+.section{padding:78px 56px;max-width:1140px;margin:0 auto;}
+.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.stitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;margin-bottom:8px;line-height:1.1;}
+.ssub{font-size:16px;color:#4a5a6b;font-weight:300;max-width:510px;line-height:1.65;margin-bottom:46px;}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e4e9f0;border:1px solid #e4e9f0;border-radius:14px;overflow:hidden;}
+.ec{background:#fff;padding:30px 26px;cursor:pointer;transition:background .15s;}
+.ec:hover{background:#f4f7ff;}
+.ei{font-size:24px;margin-bottom:13px;display:block;}
+.et{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#0d1b2a;margin-bottom:5px;}
+.ed{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+
+/* QUALITY */
+.qs{background:#f6f8fc;padding:78px 56px;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
+.qi{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.qqt{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;line-height:1.1;margin-bottom:14px;}
+.qsub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.7;margin-bottom:26px;}
+.quote{border-left:3px solid #0057FF;padding-left:20px;font-size:14px;color:#4a5a6b;font-style:italic;line-height:1.7;font-weight:300;}
+.qcards{display:flex;flex-direction:column;gap:15px;}
+.qc{background:#fff;border:1px solid #e4e9f0;border-radius:10px;padding:22px;display:flex;gap:14px;align-items:flex-start;}
+.qico{width:40px;height:40px;border-radius:8px;background:#EEF4FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:#0057FF;}
+.qt{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:#0d1b2a;margin-bottom:4px;}
+.qd{font-size:13px;color:#7a8fa6;line-height:1.55;font-weight:300;}
+
+/* AI */
+.ais{background:#0057FF;padding:78px 56px;}
+.aii{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.atag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.atitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;color:#fff;line-height:1.08;letter-spacing:-1px;margin-bottom:16px;}
+.asub{font-size:16px;color:#b8d0ff;font-weight:300;line-height:1.65;margin-bottom:30px;}
+.abtn{background:#fff;color:#0057FF;border:none;padding:14px 28px;border-radius:7px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.acard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:30px;}
+.actag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px;}
+.aps{display:flex;flex-direction:column;gap:13px;}
+.ap{display:flex;align-items:flex-start;gap:10px;}
+.ach{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;color:#fff;font-weight:700;}
+.apt{font-size:14px;color:#e0ecff;line-height:1.5;font-weight:300;}
+.afn{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#93b8ff;font-style:italic;line-height:1.5;}
+
+/* DIFF */
+.ds{padding:78px 56px;max-width:1140px;margin:0 auto;}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;}
+.dc{border:1px solid #e4e9f0;border-radius:12px;padding:30px;transition:border-color .15s;}
+.dc:hover{border-color:#0057FF;}
+.dn{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;color:#c8d2de;letter-spacing:1px;margin-bottom:13px;}
+.dt{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#0d1b2a;margin-bottom:8px;line-height:1.25;}
+.dd{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+
+/* PROMISE STRIP */
+.promise-strip{background:#0d1b2a;padding:56px 56px;}
+.promise-strip-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.ps-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:32px;display:flex;gap:18px;align-items:flex-start;}
+.ps-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.ps-icon.teal{background:#0ABFBF;}
+.ps-icon.blue{background:#0057FF;}
+.ps-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+.ps-tag.teal{color:#0ABFBF;}
+.ps-tag.blue{color:#4d8eff;}
+.ps-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25;}
+.ps-desc{font-size:13px;color:#94a3b8;line-height:1.65;font-weight:300;}
+
+/* CASES */
+.css{background:#f6f8fc;padding:78px 56px;}
+.csi{max-width:1140px;margin:0 auto;}
+.csg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px;}
+.cc{background:#fff;border:1px solid #e4e9f0;border-radius:12px;overflow:hidden;transition:box-shadow .15s;}
+.cc:hover{box-shadow:0 4px 20px rgba(0,87,255,.08);}
+.ct{padding:26px 26px 18px;}
+.ci{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.ctl{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:700;color:#0d1b2a;line-height:1.3;margin-bottom:14px;}
+.cmr{display:flex;align-items:baseline;gap:6px;}
+.cmn{font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;color:#0057FF;}
+.cml{font-size:12px;color:#7a8fa6;}
+.cb{padding:14px 26px;border-top:1px solid #f0f3f8;font-size:13px;color:#0057FF;font-weight:500;cursor:pointer;}
+
+/* LOGO DIVIDER */
+.divr{padding:38px 56px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid #e4e9f0;}
+.dl{flex:1;height:1px;background:#e4e9f0;max-width:200px;}
+
+/* CTA */
+.ctas{padding:80px 56px;max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.ctat{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;letter-spacing:-1.2px;color:#0d1b2a;line-height:1.1;margin-bottom:14px;}
+.ctasb{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.65;margin-bottom:28px;}
+.ctab{display:flex;gap:12px;flex-wrap:wrap;}
+.form-box{background:#f6f8fc;border:1px solid #e4e9f0;border-radius:14px;padding:34px;}
+.fbt{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;color:#0d1b2a;margin-bottom:22px;}
+.fr{margin-bottom:14px;}
+.fr label{display:block;font-size:11px;font-weight:600;color:#4a5a6b;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px;}
+.fr input,.fr select{width:100%;background:#fff;border:1px solid #d0d8e4;border-radius:6px;padding:11px 14px;font-family:'Epilogue',sans-serif;font-size:14px;color:#0d1b2a;outline:none;}
+.fsub{width:100%;background:#0057FF;color:#fff;border:none;padding:14px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;margin-top:4px;font-family:'Epilogue',sans-serif;}
+
+/* FOOTER */
+footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.fl{display:flex;gap:24px;}
+.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;transition:color .15s;}
+.fl a:hover{color:#fff;}
+.fc{font-size:12px;color:#4a5a6b;}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
+.mobile-menu a:hover{color:#0057FF;}
+.mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+.mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+@media(max-width:768px){.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}}
+@media(max-width:768px){
+  nav{padding:14px 20px;flex-wrap:wrap;gap:12px;}
+  nav svg{width:130px;height:30px;}
+  .nav-links{display:none;}
+  .nav-right{gap:8px;}
+  .btn-ghost-sm{padding:8px 14px;font-size:12px;}
+  .btn-blue{padding:8px 14px;font-size:12px;}
+  .hero{padding:48px 20px 40px;grid-template-columns:1fr!important;gap:32px!important;text-align:center;}
+  h1{font-size:36px!important;letter-spacing:-1px!important;margin-left:auto;margin-right:auto;}
+  h1 .bl{display:inline;}
+  .hero-sub,.hero-sub p{font-size:15px!important;max-width:100%!important;}
+  .btns{justify-content:center;flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  .sc{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+  .ticker{padding:12px 0;}
+  .ti{padding:0 16px;font-size:11px;}
+  .section{padding:48px 20px;}
+  .exp-grid{grid-template-columns:1fr!important;}
+  .dg{grid-template-columns:1fr!important;}
+  .csg{grid-template-columns:1fr!important;}
+  .story-inner,.qi,.aii,.promise-strip-inner,.ctas{grid-template-columns:1fr!important;direction:ltr!important;}
+  .stitle,.qqt,.atitle,.ctat{font-size:28px!important;letter-spacing:-.5px!important;}
+  .ssub,.hero-sub{max-width:100%!important;}
+  .promise-strip{padding:48px 20px!important;}
+  .promise-strip-inner{grid-template-columns:1fr!important;}
+  .ps-card{flex-direction:column;}
+  .qs{padding:48px 20px!important;}
+  .qi{grid-template-columns:1fr!important;}
+  .divr{padding:28px 20px;}
+  .ctas{grid-template-columns:1fr!important;gap:32px!important;padding:48px 20px!important;}
+  .ctat{font-size:28px!important;}
+  .ctab{flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}
+  .ais{padding:48px 20px!important;}
+  .ds{padding:48px 20px!important;}
+  .css{padding:48px 20px!important;}
+}
+@media(max-width:480px){
+  h1{font-size:30px!important;}
+}
+.nav-links li a{text-decoration:none;color:inherit;}
+.nav-links li a:hover{color:#0057FF;}
+.nav-links li.active a{color:#0057FF;font-weight:600;}
+a.btn-ghost-sm{text-decoration:none;display:inline-block;}
+a.btn-blue{text-decoration:none;display:inline-block;}
+a.btn-p,a.btn-g,a.btn-white,a.btn-outline-white,a.abtn,a.af-btn,a.book-btn{text-decoration:none;display:inline-block;text-align:center;}
+a.svc-link{text-decoration:none;}
+a.cb{text-decoration:none;display:block;}
+a.ec{display:block;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-engineering.html">AI Engineering</a></li>
+    <li><a href="technologies.html">Technologies</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  </a>
+  <div class="nav-right">
+    <a href="case-studies.html" class="btn-ghost-sm">Our work</a>
+    <a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-blue">Book a call</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a>
+  <a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-cta" onclick="window.open('https://calendly.com/pdonovan-c3s/30min','_blank')">Book a free call</button>
+</div>
+
+<!-- HERO -->
+<section style="background:#fff;padding-bottom:0;">
+  <div class="hero">
+    <div class="eyebrow"><div class="dot"></div>Forward-Deployed · Agile · AI &amp; Software Engineering</div>
+    <h1>Engineers who build for <span class="bl">where your business is going</span></h1>
+    <p class="hero-sub">C3S embeds senior engineering teams inside US companies — building production AI, modern software, and the infrastructure to scale both. Quality is not a checkbox. It's how we operate.</p>
+    <div class="btns">
+      <a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-p">Book a free consultation</a>
+      <a href="case-studies.html" class="btn-g">See our work</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ti">AI Agent Implementation</span><span class="ts">·</span>
+    <span class="ti">Agile Engineering Teams</span><span class="ts">·</span>
+    <span class="ti">Enterprise Software Engineering</span><span class="ts">·</span>
+    <span class="ti">Cloud &amp; DevOps</span><span class="ts">·</span>
+    <span class="ti">Application Modernization</span><span class="ts">·</span>
+    <span class="ti">Managed Engineering Teams</span><span class="ts">·</span>
+    <span class="ti">QA &amp; Test Automation</span><span class="ts">·</span>
+    <span class="ti">Product Engineering</span><span class="ts">·</span>
+    <span class="ti">AI Agent Implementation</span><span class="ts">·</span>
+    <span class="ti">Agile Engineering Teams</span><span class="ts">·</span>
+    <span class="ti">Enterprise Software Engineering</span><span class="ts">·</span>
+    <span class="ti">Cloud &amp; DevOps</span><span class="ts">·</span>
+    <span class="ti">Application Modernization</span><span class="ts">·</span>
+    <span class="ti">Managed Engineering Teams</span><span class="ts">·</span>
+    <span class="ti">QA &amp; Test Automation</span><span class="ts">·</span>
+    <span class="ti">Product Engineering</span><span class="ts">·</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="sc"><div class="sn">300+</div><div class="sl">Engineers placed</div></div>
+  <div class="sc"><div class="sn">11+ yrs</div><div class="sl">US market presence</div></div>
+  <div class="sc"><div class="sn">15+</div><div class="sl">Industries served</div></div>
+  <div class="sc"><div class="sn">AI</div><div class="sl">Agents in production</div></div>
+</div>
+
+<!-- EXPERTISE -->
+<section class="section">
+  <div class="lbl">Our expertise</div>
+  <div class="stitle">End-to-end engineering,<br>built for modern teams</div>
+  <p class="ssub">From AI agent implementation to cloud infrastructure — we cover the full stack of what growing US companies need to build and scale.</p>
+  <div class="exp-grid">
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">◈</span><div class="et">AI Engineering &amp; Agents</div><div class="ed">Production AI agent implementation — autonomous workflows, enterprise chatbots, and deep integrations built to last.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">⚙</span><div class="et">Software Development &amp; QA</div><div class="ed">Full-stack engineering across React, Node, Python, Java, Flutter — built to your standards, inside your process.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">☁</span><div class="et">Cloud &amp; DevOps</div><div class="ed">AWS, Azure, GCP — containerized, automated, and production-ready infrastructure that scales with you.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">↺</span><div class="et">Application Modernization</div><div class="ed">Migrate legacy systems to modern stacks without disrupting live operations. Done across 15+ industries.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">◎</span><div class="et">Managed Engineering Teams</div><div class="ed">Self-managed pods with a tech lead, engineers, and QA — one accountable unit embedded in your organization.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">⬡</span><div class="et">Product Engineering</div><div class="ed">End-to-end product builds from architecture to delivery. We design, build, and maintain products that last.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">⚡</span><div class="et">Agile Teams</div><div class="ed">Sprint-based delivery with full transparency — velocity, retrospectives, and continuous improvement baked into every engagement.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">◑</span><div class="et">Staff Augmentation</div><div class="ed">Add senior engineers to your existing team within days — full ownership, zero management overhead on your end.</div></a>
+    <a href="services.html" class="ec" style="text-decoration:none;color:inherit;"><span class="ei">∷</span><div class="et">Data & Analytics</div><div class="ed">Data engineering, pipelines, and analytics platforms — turning your data into decisions, not just dashboards.</div></a>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="qs">
+  <div class="qi">
+    <div>
+      <div class="lbl">Our standard</div>
+      <div class="qqt">Quality isn't a deliverable. It's how we operate.</div>
+      <p class="qsub">We don't measure success by lines of code or tickets closed. We measure it by whether your product works, your users trust it, and your engineers are proud of what they built.</p>
+      <blockquote class="quote">"During my career, I have hired outsourcing companies and worked for outsourcing companies. The transparency, ownership, and quality that C3S offers are simply unmatched."<br><br>— US Client, 8+ year partnership</blockquote>
+    </div>
+    <div class="qcards">
+      <div class="qc"><div class="qico">◎</div><div><div class="qt">Code review culture</div><div class="qd">Every line reviewed. Every PR a conversation. We hold each other to a standard that goes beyond "it works."</div></div></div>
+      <div class="qc"><div class="qico">✓</div><div><div class="qt">QA embedded in every team</div><div class="qd">Dedicated QA engineers in every sprint — not an afterthought, but a first-class part of how we build.</div></div></div>
+      <div class="qc"><div class="qico">⬡</div><div><div class="qt">Ownership over execution</div><div class="qd">Our engineers flag issues early, push back when needed, and care deeply about what gets built.</div></div></div>
+      <div class="qc"><div class="qico">◈</div><div><div class="qt">Full transparency, always</div><div class="qd">Sprint velocity, code quality, delivery health — you see it all. No surprises, no black boxes.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI SPOTLIGHT -->
+<section class="ais">
+  <div class="aii">
+    <div>
+      <div class="atag">Live in production</div>
+      <div class="atitle">Six months ago, a client had a vision for AI. Today, they have agents running.</div>
+      <p class="asub">We don't hand over slide decks. We embed inside your organization as builders — sitting alongside your teams, integrating into your stack, and delivering AI that works in the real world.</p>
+      <a href="case-studies.html" class="abtn">See the full story</a>
+    </div>
+    <div class="acard">
+      <div class="actag">Enterprise AI Agent Implementation</div>
+      <div class="aps">
+        <div class="ap"><div class="ach">✓</div><div class="apt">AI agents that autonomously navigate complex enterprise workflows</div></div>
+        <div class="ap"><div class="ach">✓</div><div class="apt">Chatbots trained on your business knowledge — not generic data</div></div>
+        <div class="ap"><div class="ach">✓</div><div class="apt">Seamless integrations into your existing enterprise stack</div></div>
+        <div class="ap"><div class="ach">✓</div><div class="apt">A foundation your team can scale and own long-term</div></div>
+      </div>
+      <div class="afn">"The hardest part of enterprise AI isn't the model. It's the integration, the context, the trust. That's exactly where we focus."</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section class="ds">
+  <div class="lbl">Your unfair advantage</div>
+  <div class="stitle">Why companies choose C3S</div>
+  <p class="ssub">Not just a vendor. A forward-deployed engineering partner that thinks about where your business is going — and builds for it.</p>
+  <div class="dg">
+    <div class="dc"><div class="dn">01</div><div class="dt">Forward-deployed engineers</div><div class="dd">Our teams embed inside your organization, understand the context, and build with long-term thinking — not just sprint-to-sprint execution.</div></div>
+    <div class="dc"><div class="dn">02</div><div class="dt">AI-ready by default</div><div class="dd">We're already building production AI for enterprises. Every engagement benefits from what we're learning at the frontier of real-world AI deployment.</div></div>
+    <div class="dc"><div class="dn">03</div><div class="dt">A dedicated PM — at no cost</div><div class="dd">Every client gets a dedicated Project Manager included at no extra charge. One person to call, one person who knows your project, every single day.</div></div>
+    <div class="dc"><div class="dn">04</div><div class="dt">Walk away in weeks, not months</div><div class="dd">Not satisfied? Terminate with just a few weeks of notice — no penalties, no long wind-downs. We offer this because we are confident in our work.</div></div>
+    <div class="dc"><div class="dn">05</div><div class="dt">Agile by design</div><div class="dd">We work in sprints, ship in iterations, and adapt fast. Your priorities change — our process is built to keep up without losing momentum.</div></div>
+    <div class="dc"><div class="dn">06</div><div class="dt">Engineers who take ownership</div><div class="dd">Our engineers flag problems before they become yours. They suggest improvements and show up like employees — not contractors.</div></div>
+  </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise-strip">
+  <div class="promise-strip-inner">
+    <div class="ps-card">
+      <div class="ps-icon teal">◎</div>
+      <div>
+        <div class="ps-tag teal">Included at no cost</div>
+        <div class="ps-title">A dedicated Project Manager from day one</div>
+        <div class="ps-desc">Every C3S client gets a dedicated PM at no extra charge — your single point of contact for communication, updates, and day-to-day coordination. You always know where things stand.</div>
+      </div>
+    </div>
+    <div class="ps-card">
+      <div class="ps-icon blue">⚡</div>
+      <div>
+        <div class="ps-tag blue">Our confidence guarantee</div>
+        <div class="ps-title">Not happy? Walk away in weeks — not months</div>
+        <div class="ps-desc">We don't lock you into long contracts. If we're not delivering to your standard, terminate with just a few weeks of notice. No penalties. We offer this because we back our work completely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="css">
+  <div class="csi">
+    <div class="lbl">Results</div>
+    <div class="stitle">What we've delivered</div>
+    <p class="ssub">Outcomes across enterprise AI, cybersecurity, renewable energy, and SaaS — with US clients who are still with us today.</p>
+    <div class="csg">
+      <div class="cc"><div class="ct"><div class="ci">Enterprise AI</div><div class="ctl">AI agents running autonomously inside a large enterprise — from vision to production in 6 months</div><div class="cmr"><div class="cmn">6 mo</div><div class="cml">concept to production</div></div></div><a href="case-studies.html" class="cb">Read case study →</a></div>
+      <div class="cc"><div class="ct"><div class="ci">Cybersecurity</div><div class="ctl">Scaled a security platform engineering team from 3 to 11 in 60 days</div><div class="cmr"><div class="cmn">60 days</div><div class="cml">to full team operational</div></div></div><a href="case-studies.html" class="cb">Read case study →</a></div>
+      <div class="cc"><div class="ct"><div class="ci">SaaS · Scale-up</div><div class="ctl">First client engaged us 8 years ago — and is still a customer today</div><div class="cmr"><div class="cmn">8 yrs</div><div class="cml">of continuous partnership</div></div></div><a href="case-studies.html" class="cb">Read case study →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO DIVIDER -->
+<div class="divr">
+  <div class="dl"></div>
+  <svg viewBox="0 0 220 52" width="140" height="32" xmlns="http://www.w3.org/2000/svg" style="opacity:.3;">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="dl"></div>
+</div>
+
+<!-- CTA + FORM -->
+<section class="ctas">
+  <div>
+    <div class="ctat">Let's build what's next together</div>
+    <p class="ctasb">Tell us what you're working on — whether it's an AI initiative, a team to scale, or a system that needs modernizing. We'll tell you exactly how we'd approach it.</p>
+    <div class="ctab">
+      <a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-p">Book a 30-min call</a>
+      <a href="case-studies.html" class="btn-g">View all case studies</a>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="fbt">Get in touch</div>
+    <div class="fr"><label>Your name</label><input type="text" placeholder="Pete Carlson"></div>
+    <div class="fr"><label>Company</label><input type="text" placeholder="Acme Corp"></div>
+    <div class="fr"><label>What are you looking for?</label>
+      <select><option>AI Engineering</option><option>Staff Augmentation</option><option>Managed Team</option><option>Product Engineering</option><option>Modernization</option><option>Cloud / DevOps</option></select>
+    </div>
+    <button class="fsub">Send message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="fl">
+    <a href="services.html">Services</a><a href="ai-engineering.html">AI Engineering</a><a href="technologies.html">Technologies</a><a href="case-studies.html">Case Studies</a><a href="about.html">About</a>
+  </div>
+  <div class="fc">© 2026 C3S Software · Cairo, Egypt · US-Facing Operations</div>
+</footer>
+
+</body>
+</html>
