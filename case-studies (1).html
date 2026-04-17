@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | C3S Software</title>
+<meta name="description" content="Real outcomes from C3S engineering engagements — cloud migrations, performance optimization, QA automation, cybersecurity, and enterprise AI in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Epilogue',sans-serif;color:#0d1b2a;background:#fff;overflow-x:hidden;}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;border-bottom:1px solid #e4e9f0;background:#fff;position:sticky;top:0;z-index:100;}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:14px;color:#4a5a6b;}
+.nav-links li{cursor:pointer;transition:color .15s;}
+.nav-links li:hover{color:#0057FF;}
+.nav-links li.active{color:#0057FF;font-weight:600;}
+.nav-right{display:flex;gap:12px;}
+.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* HERO */
+.hero{padding:88px 56px 72px;max-width:1140px;margin:0 auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:28px;letter-spacing:.6px;text-transform:uppercase;}
+.dot{width:7px;height:7px;border-radius:50%;background:#0057FF;animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:52px;font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:#0d1b2a;margin-bottom:22px;max-width:800px;margin-left:auto;margin-right:auto;}
+h1 .bl{color:#0057FF;}
+.hero-sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:580px;margin:0 auto;}
+
+/* FEATURED */
+.featured{padding:0 56px 80px;max-width:1140px;margin:0 auto;}
+.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.stitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;margin-bottom:8px;line-height:1.1;}
+.ssub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.65;margin-bottom:52px;max-width:520px;}
+
+/* AI FEATURE CARD */
+.ai-feature{background:#0057FF;border-radius:16px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:28px;}
+.af-tag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.af-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;}
+.af-desc{font-size:15px;color:#b8d0ff;font-weight:300;line-height:1.7;margin-bottom:28px;}
+.af-btn{display:inline-block;background:#fff;color:#0057FF;padding:13px 26px;border-radius:7px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:'Epilogue',sans-serif;}
+.af-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:28px;}
+.af-card-tag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
+.af-points{display:flex;flex-direction:column;gap:12px;}
+.af-point{display:flex;align-items:flex-start;gap:10px;}
+.af-check{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;color:#fff;font-weight:700;}
+.af-pt{font-size:13px;color:#e0ecff;line-height:1.5;font-weight:300;}
+.af-quote{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#93b8ff;font-style:italic;line-height:1.5;}
+
+/* CASE STUDY GRID */
+.cs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.cs-card{border:1px solid #e4e9f0;border-radius:14px;overflow:hidden;transition:box-shadow .2s;}
+.cs-card:hover{box-shadow:0 4px 24px rgba(0,87,255,.08);}
+.cs-header{padding:32px 32px 24px;}
+.cs-ind{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cs-ind-dot{width:6px;height:6px;border-radius:50%;background:#0057FF;}
+.cs-client{font-size:12px;color:#94a3b8;margin-bottom:10px;font-weight:400;}
+.cs-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:#0d1b2a;line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+.cs-desc{font-size:14px;color:#4a5a6b;line-height:1.7;font-weight:300;}
+.cs-metrics{display:flex;gap:0;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
+.cs-metric{flex:1;padding:20px 24px;border-right:1px solid #e4e9f0;text-align:center;}
+.cs-metric:last-child{border-right:none;}
+.cs-metric-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:800;color:#0057FF;letter-spacing:-.5px;}
+.cs-metric-l{font-size:11px;color:#7a8fa6;margin-top:3px;font-weight:400;}
+.cs-body{padding:24px 32px;}
+.cs-section-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:#0d1b2a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;font-size:11px;}
+.cs-section-text{font-size:13px;color:#4a5a6b;line-height:1.65;font-weight:300;margin-bottom:18px;}
+.cs-tags{display:flex;flex-wrap:wrap;gap:6px;padding:0 32px 28px;}
+.cs-tag{font-size:11px;background:#f6f8fc;border:1px solid #e4e9f0;color:#4a5a6b;padding:4px 10px;border-radius:6px;}
+.cs-footer{padding:16px 32px;border-top:1px solid #f0f3f8;display:flex;align-items:center;justify-content:space-between;}
+.cs-client-name{font-size:13px;font-weight:500;color:#0d1b2a;}
+.cs-read{font-size:13px;color:#0057FF;font-weight:500;cursor:pointer;}
+
+/* CONFIDENTIAL BADGE */
+.conf-badge{display:inline-flex;align-items:center;gap:5px;background:#f6f8fc;border:1px solid #e4e9f0;color:#7a8fa6;font-size:11px;padding:3px 10px;border-radius:10px;font-weight:400;}
+
+/* CTA */
+.cta-section{background:#0057FF;padding:78px 56px;text-align:center;}
+.ctat{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;letter-spacing:-1px;color:#fff;line-height:1.1;margin-bottom:14px;}
+.ctasb{font-size:16px;color:#b8d0ff;font-weight:300;line-height:1.65;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:#fff;color:#0057FF;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* DIVIDER */
+.divr{padding:38px 56px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid #e4e9f0;}
+.dl{flex:1;height:1px;background:#e4e9f0;max-width:200px;}
+
+footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.fl{display:flex;gap:24px;}
+.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;}
+.fl a:hover{color:#fff;}
+.fc{font-size:12px;color:#4a5a6b;}
+
+
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+  .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
+  .mobile-menu a:hover{color:#0057FF;}
+  .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+  .mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+  @media(max-width:768px){.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}}
+  /* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  nav{padding:14px 20px;flex-wrap:wrap;gap:12px;}
+  nav svg{width:130px;height:30px;}
+  .nav-links{display:none;}
+  .nav-right{gap:8px;}
+  .btn-ghost-sm{padding:8px 14px;font-size:12px;}
+  .btn-blue{padding:8px 14px;font-size:12px;}
+
+  .hero{padding:48px 20px 40px;grid-template-columns:1fr!important;gap:32px!important;text-align:center;}
+  h1{font-size:36px!important;letter-spacing:-1px!important;margin-left:auto;margin-right:auto;}
+  h1 .bl{display:inline;}
+  .hero-sub,.hero-sub p{font-size:15px!important;max-width:100%!important;}
+  .btns{justify-content:center;flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  .hero-stats{grid-template-columns:1fr 1fr!important;}
+  .hero-card{padding:24px;}
+  .hc-bar{flex-wrap:wrap;gap:16px;}
+
+  .stats-row{flex-wrap:wrap;margin:0;}
+  .stat-cell{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+  .sc{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+
+  .ticker{padding:12px 0;}
+  .ti{padding:0 16px;font-size:11px;}
+
+  .section{padding:48px 20px;}
+  .sec,.tech-section,.svc-section,.ds,.diff-section,.cases-section,.css,.faq,.team,.values,.story,.founder-inner,.about-inner,.culture{padding:48px 20px!important;}
+  .exp-grid{grid-template-columns:1fr!important;}
+  .ind-grid{grid-template-columns:1fr!important;}
+  .caps-grid{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr 1fr!important;}
+  .tech-grid{grid-template-columns:1fr 1fr!important;}
+  .dg,.diff-grid{grid-template-columns:1fr!important;}
+  .csg,.cases-grid{grid-template-columns:1fr!important;}
+  .models-grid{grid-template-columns:1fr!important;}
+  .faq-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr 1fr!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .cs-grid{grid-template-columns:1fr!important;}
+
+  .story-inner,.qi,.aii,.aii,.how-inner,.bring-inner,.culture-inner,.promise-strip-inner,.ai-feature,.hero,.ctas,.cta-section .cta-inner,.svc-block,.svc-block.reverse,.founder-inner{grid-template-columns:1fr!important;direction:ltr!important;}
+  .svc-block{padding:40px 0!important;}
+  .ai-feature{padding:32px 20px!important;}
+  .af-title{font-size:26px!important;}
+
+  .stitle,.sec-title,.qqt,.atitle,.bring-title,.culture-title,.ctat,.ctat,.founder-name{font-size:28px!important;letter-spacing:-.5px!important;}
+  .ssub,.sec-sub,.hero-sub{max-width:100%!important;}
+
+  .promise-strip{padding:48px 20px!important;}
+  .promise-strip-inner{grid-template-columns:1fr!important;}
+  .ps-card{flex-direction:column;}
+
+  .qs{padding:48px 20px!important;}
+  .qi{grid-template-columns:1fr!important;}
+
+  .divr{padding:28px 20px;}
+
+  .cta-section{padding:48px 20px!important;}
+  .cta-inner,.ctas{grid-template-columns:1fr!important;gap:32px!important;padding:48px 20px!important;}
+  .ctat{font-size:28px!important;}
+  .cta-btns,.ctab{flex-direction:column;align-items:center;}
+  .btn-white,.btn-outline-white,.btn-p,.btn-g{width:100%;max-width:320px;}
+
+  .main{grid-template-columns:1fr!important;padding:0 20px 48px!important;}
+  .right-col{gap:16px;}
+
+  .founder-inner{grid-template-columns:1fr!important;gap:28px!important;text-align:center;}
+  .founder-avatar{margin:0 auto;}
+  .founder-creds{justify-content:center;}
+
+  .culture-stats{gap:12px;}
+  .culture-stat{padding:18px 20px;}
+
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}
+
+  .lbl{font-size:11px;}
+  .book-card{padding:24px;}
+  .contact-card,.promise-card{padding:24px;}
+
+  .ai-section,.ais{padding:48px 20px!important;}
+}
+
+@media(max-width:480px){
+  h1{font-size:30px!important;}
+  .hero-stats{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr!important;}
+  .tech-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr!important;}
+  .hc-bar{flex-direction:column;gap:12px;}
+  .cs-metrics{flex-direction:column;}
+  .cs-metric{border-right:none;border-bottom:1px solid #e4e9f0;}
+  .cs-metric:last-child{border-bottom:none;}
+}
+/* ===== END MOBILE ===== */
+
+  .nav-links li a{text-decoration:none;color:inherit;}
+  .nav-links li a:hover{color:#0057FF;}
+  .nav-links li.active a{color:#0057FF;font-weight:600;}
+  a.btn-ghost-sm{text-decoration:none;display:inline-block;}
+  a.btn-blue{text-decoration:none;display:inline-block;}
+
+  a.btn-p,a.btn-g,a.btn-white,a.btn-outline-white,a.abtn,a.af-btn,a.book-btn{text-decoration:none;display:inline-block;text-align:center;}
+  a.svc-link{text-decoration:none;}
+  a.cb{text-decoration:none;display:block;}
+  a.ec{display:block;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;">
+    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+      <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+      <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+      <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+      <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+      <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+      <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+      <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+      <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+    </svg>
+  </a>
+      <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-engineering.html">AI Engineering</a></li>
+    <li><a href="technologies.html">Technologies</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li class="active"><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="case-studies.html" class="btn-ghost-sm">Our work</a>
+    <a href="contact.html" class="btn-blue">Book a call</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a>
+  <a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-cta" onclick="location.href='contact.html'">Book a free call</button>
+</div>
+
+<!-- HERO -->
+<section style="background:#fff;">
+  <div class="hero">
+    <div class="eyebrow"><div class="dot"></div>Proof of work</div>
+    <h1>Real problems solved. <span class="bl">Real outcomes delivered.</span></h1>
+    <p class="hero-sub">Real engagements. Real outcomes. From cloud migrations and performance overhauls to cybersecurity platforms and enterprise AI running in production.</p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="featured">
+
+  <!-- AI FEATURED -->
+  <div class="lbl">Featured</div>
+  <div class="stitle">Our most recent work</div>
+  <p class="ssub">The hardest part of enterprise AI isn't the model. It's the integration, the context, and the trust.</p>
+
+  <div class="ai-feature">
+    <div>
+      <div class="af-tag">Enterprise AI · Active engagement</div>
+      <div class="af-title">From AI vision to agents running in production</div>
+      <p class="af-desc">A large enterprise had a clear vision for what AI could do for their business. What they needed were engineers who could actually build it — embedded inside their organization, working inside their stack, and accountable for the outcome.</p>
+      <a href="case-studies.html" class="af-btn">Read the full story</a>
+    </div>
+    <div class="af-card">
+      <div class="af-card-tag">What we built</div>
+      <div class="af-points">
+        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">AI agents that autonomously navigate complex enterprise workflows</div></div>
+        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">Enterprise chatbot trained on the client's own business knowledge</div></div>
+        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">Deep integrations into their existing enterprise technology stack</div></div>
+        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">A scalable AI foundation the client owns and can extend independently</div></div>
+      </div>
+      <div class="af-quote">"We don't hand over slide decks. We embed as builders and deliver AI that works in the real world."</div>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES GRID -->
+  <div class="cs-grid">
+
+    <!-- Pulsar Security -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Cybersecurity</div>
+        <div class="cs-client">Pulsar Security · pulsarsecurity.com</div>
+        <div class="cs-title">Cloud architecture to automate dark web scan execution at scale</div>
+        <p class="cs-desc">Pulsar Security's dark web scanning service was running as manual scripts on local machines. As their customer base grew, the manual process became a bottleneck. C3S built a fully automated cloud-native solution on AWS that runs multiple scans simultaneously and delivers real-time reports.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">100%</div><div class="cs-metric-l">Process automated</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">0</div><div class="cs-metric-l">Manual upload steps</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">AWS</div><div class="cs-metric-l">Lambda · S3 · Private cloud</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">Security admins manually executed scripts and uploaded results — time-consuming, error-prone, and impossible to scale as the client base grew.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">We built a serverless architecture using AWS Lambda to run scans simultaneously, centralized output storage in S3, and a real-time UI dashboard showing live scan logs over a secure socket connection.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">Security admins can now launch multiple dark web scans from the portal and generate client reports immediately upon completion — no file transfers, no manual steps.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">AWS Lambda</span>
+        <span class="cs-tag">S3</span>
+        <span class="cs-tag">Serverless</span>
+        <span class="cs-tag">Real-time UI</span>
+        <span class="cs-tag">Cybersecurity</span>
+      </div>
+    </div>
+
+    <!-- Electronics - Performance -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
+        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
+        <div class="cs-title">Fixing a slow, unresponsive system managing millions of supply chain records</div>
+        <p class="cs-desc">A global electronics distributor serving OEMs, military, and aerospace suppliers was running mission-critical software that had become dangerously slow. The system managed millions of database records and operated 24/7 — any slowdown meant operational disruption and customer risk.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">Millions</div><div class="cs-metric-l">Records optimized</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">24/7</div><div class="cs-metric-l">Uptime required</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">Global</div><div class="cs-metric-l">Client base served</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">High data volume caused severe performance degradation. Slow response times were creating inefficiencies and threatening customer relationships on a global scale.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">We optimized database indexing and SQL queries, introduced API paging to reduce data loads, and separated the warehouse data into a dedicated independent service with its own database and load balancing.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">A robust, scalable system capable of handling intensive data loads without performance compromise — with the architecture to grow as the client's business evolves.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">Database optimization</span>
+        <span class="cs-tag">SQL</span>
+        <span class="cs-tag">Microservices</span>
+        <span class="cs-tag">Load balancing</span>
+        <span class="cs-tag">API design</span>
+      </div>
+    </div>
+
+    <!-- Electronics - QA -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
+        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
+        <div class="cs-title">Building a QA process from zero for a global supply chain platform</div>
+        <p class="cs-desc">One of the fastest-growing global independent electronics distributors had no software testing processes in place. Critical bugs were reaching production, disrupting operations and impacting their global client base — including major OEMs and aerospace suppliers.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">Zero</div><div class="cs-metric-l">Prior QA process</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">↓</div><div class="cs-metric-l">Critical errors in production</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">Auto</div><div class="cs-metric-l">Smoke testing implemented</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">No testing framework meant frequent critical-error releases that disrupted live operations, increased support costs, and damaged client confidence.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">We implemented manual testing for immediate stabilization, then systematically built an automated smoke testing pipeline prioritizing the most business-critical functions for every release.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">A stable, reliable software system — significantly fewer production rollbacks, reduced support costs, and increased client confidence across a global customer base.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">QA automation</span>
+        <span class="cs-tag">Smoke testing</span>
+        <span class="cs-tag">CI/CD</span>
+        <span class="cs-tag">Quality engineering</span>
+      </div>
+    </div>
+
+    <!-- Electronics - UX -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
+        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
+        <div class="cs-title">UX overhaul that cut support calls and accelerated order processing</div>
+        <p class="cs-desc">The same global electronics distributor's product interface had become so complex that it was actively slowing down their operations. Overly dense screens were causing a surge in support calls and significantly slowing order processing and deal closure times.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">↓</div><div class="cs-metric-l">IT support calls</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">Faster</div><div class="cs-metric-l">Order processing</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">↑</div><div class="cs-metric-l">User productivity</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">Overly complex screens with excessive information density were blocking user productivity, increasing support overhead, and slowing down critical business workflows.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">We took a user-centric approach — gathering direct feedback, building multiple prototypes, iterating with stakeholders, and redesigning the interface around how users actually work.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">Faster order processing, fewer support calls, and a user base that enthusiastically adopted the new design. Deal closure times with suppliers and clients improved measurably.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">UX design</span>
+        <span class="cs-tag">User research</span>
+        <span class="cs-tag">Prototyping</span>
+        <span class="cs-tag">Product redesign</span>
+      </div>
+    </div>
+
+    <!-- Reflex Radio AWS -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Music & Fitness Technology</div>
+        <div class="cs-client">Reflex Radio · reflex-radio.com</div>
+        <div class="cs-title">AWS cloud migration delivered in less than half the estimated time</div>
+        <p class="cs-desc">Reflex Radio — a fitness music startup — needed to move off traditional hosting to a scalable AWS infrastructure. The challenge was their custom music engine, which had specific concurrency and scaling requirements that required a non-standard architecture approach.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">&lt;50%</div><div class="cs-metric-l">Of estimated timeline</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">AWS</div><div class="cs-metric-l">CDK · Beanstalk · RDS</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">CI/CD</div><div class="cs-metric-l">Automated deployments</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">Traditional hosting was difficult to scale and maintain. The music engine required careful concurrency handling — running on a shared server risked performance issues when auto-scaling triggered mid-execution.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">Lift-and-shift to AWS using CDK for infrastructure-as-code. Frontend on CloudFront/S3, backend on Elastic Beanstalk, database on RDS. A custom AWS script ensured the music engine ran only on the leading server in the auto-scaling group.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">Relaunched in less than half the estimated time with automated CI/CD pipelines, CloudWatch monitoring, robust firewalls, and dramatically reduced operational overhead.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">AWS CDK</span>
+        <span class="cs-tag">Elastic Beanstalk</span>
+        <span class="cs-tag">CloudFront</span>
+        <span class="cs-tag">CloudWatch</span>
+        <span class="cs-tag">CI/CD</span>
+      </div>
+    </div>
+
+    <!-- Reflex Radio Apple Music -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-ind"><div class="cs-ind-dot"></div>Music & Fitness Technology</div>
+        <div class="cs-client">Reflex Radio · reflex-radio.com</div>
+        <div class="cs-title">Apple Music integration that cut admin review time by over 50%</div>
+        <p class="cs-desc">Reflex Radio needed to integrate Apple Music streaming into their workout playlist app — processing 20,000 songs with accurate metadata, rebuilding their media player, and delivering a seamless user experience. The integration had to work invisibly in the background during live group fitness classes.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric"><div class="cs-metric-n">50%+</div><div class="cs-metric-l">Less admin review time</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">75%</div><div class="cs-metric-l">Metadata accuracy on first hit</div></div>
+        <div class="cs-metric"><div class="cs-metric-n">20K</div><div class="cs-metric-l">Songs processed</div></div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section-title">The problem</div>
+        <p class="cs-section-text">20,000 songs needed accurate Apple Music metadata. The media player had to be rebuilt to stream from Apple Music while maintaining Reflex Radio's complex workout playlist logic — DJ effects, timing, energy levels, and genre matching.</p>
+        <div class="cs-section-title">The solution</div>
+        <p class="cs-section-text">We built a custom ranking algorithm that achieved 75% metadata accuracy on the first search hit, dramatically reducing manual review. We then rewrote the media player to integrate Apple Music streaming seamlessly behind the existing Reflex Radio UI.</p>
+        <div class="cs-section-title">The result</div>
+        <p class="cs-section-text">Admins spent more than 50% less time reviewing metadata. Reflex Radio relaunched with complete Apple Music integration — users could link accounts and control workout music in live group classes without any disruption to the experience.</p>
+      </div>
+      <div class="cs-tags">
+        <span class="cs-tag">Apple Music API</span>
+        <span class="cs-tag">iOS integration</span>
+        <span class="cs-tag">Algorithm design</span>
+        <span class="cs-tag">Media player</span>
+        <span class="cs-tag">API integration</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divr">
+  <div class="dl"></div>
+  <svg viewBox="0 0 220 52" width="140" height="32" xmlns="http://www.w3.org/2000/svg" style="opacity:.3;">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="dl"></div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="ctat">Want to see work relevant to your industry?</div>
+  <p class="ctasb">We have more engagements we can walk you through on a call — including longer-running partnerships we can't detail publicly.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-white">Book a free 30-min call</a>
+    <a href="services.html" class="btn-outline-white">See our services</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="fl">
+    <a href="index.html">Services</a>
+    <a href="ai-engineering.html">AI Engineering</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="industries.html">Industries</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="fc">© 2026 C3S Software · Cairo, Egypt · US-Facing Operations</div>
+</footer>
+
+</body>
+</html>

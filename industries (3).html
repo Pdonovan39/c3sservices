@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries We Serve | C3S Software</title>
+<meta name="description" content="C3S builds engineering teams for US companies across cybersecurity, enterprise SaaS, hospitality tech, financial services, energy, and more. 11+ years of industry depth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Epilogue',sans-serif;color:#0d1b2a;background:#fff;overflow-x:hidden;}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;border-bottom:1px solid #e4e9f0;background:#fff;position:sticky;top:0;z-index:100;}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:14px;color:#4a5a6b;}
+.nav-links li{cursor:pointer;transition:color .15s;}
+.nav-links li:hover{color:#0057FF;}
+.nav-links li.active{color:#0057FF;font-weight:600;}
+.nav-right{display:flex;gap:12px;}
+.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* HERO */
+.hero{padding:88px 56px 72px;max-width:1140px;margin:0 auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:28px;letter-spacing:.6px;text-transform:uppercase;}
+.dot{width:7px;height:7px;border-radius:50%;background:#0057FF;animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:52px;font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:#0d1b2a;margin-bottom:22px;max-width:820px;margin-left:auto;margin-right:auto;}
+h1 .bl{color:#0057FF;}
+.hero-sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:600px;margin:0 auto 48px;}
+.stats-row{display:flex;justify-content:center;gap:0;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;margin:0 -56px;}
+.stat-cell{flex:1;text-align:center;padding:28px 20px;border-right:1px solid #e4e9f0;max-width:220px;}
+.stat-cell:last-child{border-right:none;}
+.stat-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:32px;font-weight:800;color:#0d1b2a;letter-spacing:-1px;}
+.stat-l{font-size:11px;color:#7a8fa6;text-transform:uppercase;letter-spacing:.7px;margin-top:4px;font-weight:500;}
+
+/* INDUSTRIES GRID */
+.industries{padding:80px 56px;max-width:1140px;margin:0 auto;}
+.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.stitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;margin-bottom:8px;line-height:1.1;}
+.ssub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.65;margin-bottom:52px;max-width:520px;}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.ind-card{border:1px solid #e4e9f0;border-radius:14px;padding:36px;transition:border-color .2s,box-shadow .2s;cursor:pointer;}
+.ind-card:hover{border-color:#0057FF;box-shadow:0 4px 24px rgba(0,87,255,.07);}
+.ind-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.ic-blue{background:#EEF4FF;}
+.ic-teal{background:#E1F5EE;}
+.ic-amber{background:#FAEEDA;}
+.ic-coral{background:#FAECE7;}
+.ic-purple{background:#EEEDFE;}
+.ic-green{background:#EAF3DE;}
+.ic-red{background:#FCEBEB;}
+.ic-gray{background:#f1efe8;}
+.ind-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:#0d1b2a;margin-bottom:10px;line-height:1.2;}
+.ind-desc{font-size:14px;color:#4a5a6b;line-height:1.7;font-weight:300;margin-bottom:20px;}
+.ind-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.ind-tag{font-size:11px;background:#f6f8fc;border:1px solid #e4e9f0;color:#4a5a6b;padding:4px 10px;border-radius:6px;font-weight:400;}
+
+/* WHAT WE BRING */
+.bring{background:#f6f8fc;padding:80px 56px;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
+.bring-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.bring-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;line-height:1.1;margin-bottom:14px;}
+.bring-sub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.7;margin-bottom:28px;}
+.bring-quote{border-left:3px solid #0057FF;padding-left:20px;font-size:14px;color:#4a5a6b;font-style:italic;line-height:1.7;font-weight:300;}
+.bring-cards{display:flex;flex-direction:column;gap:16px;}
+.bring-card{background:#fff;border:1px solid #e4e9f0;border-radius:10px;padding:22px;display:flex;gap:14px;align-items:flex-start;}
+.bc-icon{width:40px;height:40px;border-radius:8px;background:#EEF4FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:#0057FF;}
+.bc-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:#0d1b2a;margin-bottom:3px;}
+.bc-desc{font-size:13px;color:#7a8fa6;line-height:1.55;font-weight:300;}
+
+/* PROMISE STRIP */
+.promise-strip{background:#0d1b2a;padding:56px 56px;}
+.promise-strip-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.ps-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:32px;display:flex;gap:18px;align-items:flex-start;}
+.ps-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.ps-icon.teal{background:#0ABFBF;}
+.ps-icon.blue{background:#0057FF;}
+.ps-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+.ps-tag.teal{color:#0ABFBF;}
+.ps-tag.blue{color:#4d8eff;}
+.ps-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25;}
+.ps-desc{font-size:13px;color:#94a3b8;line-height:1.65;font-weight:300;}
+
+/* DIVIDER */
+.divr{padding:38px 56px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid #e4e9f0;}
+.dl{flex:1;height:1px;background:#e4e9f0;max-width:200px;}
+
+/* CTA */
+.cta-section{background:#0057FF;padding:78px 56px;text-align:center;}
+.ctat{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;letter-spacing:-1px;color:#fff;line-height:1.1;margin-bottom:14px;}
+.ctasb{font-size:16px;color:#b8d0ff;font-weight:300;line-height:1.65;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:#fff;color:#0057FF;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.fl{display:flex;gap:24px;}
+.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;}
+.fl a:hover{color:#fff;}
+.fc{font-size:12px;color:#4a5a6b;}
+
+
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+  .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
+  .mobile-menu a:hover{color:#0057FF;}
+  .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+  .mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+  @media(max-width:768px){.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}}
+  /* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  nav{padding:14px 20px;flex-wrap:wrap;gap:12px;}
+  nav svg{width:130px;height:30px;}
+  .nav-links{display:none;}
+  .nav-right{gap:8px;}
+  .btn-ghost-sm{padding:8px 14px;font-size:12px;}
+  .btn-blue{padding:8px 14px;font-size:12px;}
+
+  .hero{padding:48px 20px 40px;grid-template-columns:1fr!important;gap:32px!important;text-align:center;}
+  h1{font-size:36px!important;letter-spacing:-1px!important;margin-left:auto;margin-right:auto;}
+  h1 .bl{display:inline;}
+  .hero-sub,.hero-sub p{font-size:15px!important;max-width:100%!important;}
+  .btns{justify-content:center;flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  .hero-stats{grid-template-columns:1fr 1fr!important;}
+  .hero-card{padding:24px;}
+  .hc-bar{flex-wrap:wrap;gap:16px;}
+
+  .stats-row{flex-wrap:wrap;margin:0;}
+  .stat-cell{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+  .sc{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+
+  .ticker{padding:12px 0;}
+  .ti{padding:0 16px;font-size:11px;}
+
+  .section{padding:48px 20px;}
+  .sec,.tech-section,.svc-section,.ds,.diff-section,.cases-section,.css,.faq,.team,.values,.story,.founder-inner,.about-inner,.culture{padding:48px 20px!important;}
+  .exp-grid{grid-template-columns:1fr!important;}
+  .ind-grid{grid-template-columns:1fr!important;}
+  .caps-grid{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr 1fr!important;}
+  .tech-grid{grid-template-columns:1fr 1fr!important;}
+  .dg,.diff-grid{grid-template-columns:1fr!important;}
+  .csg,.cases-grid{grid-template-columns:1fr!important;}
+  .models-grid{grid-template-columns:1fr!important;}
+  .faq-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr 1fr!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .cs-grid{grid-template-columns:1fr!important;}
+
+  .story-inner,.qi,.aii,.aii,.how-inner,.bring-inner,.culture-inner,.promise-strip-inner,.ai-feature,.hero,.ctas,.cta-section .cta-inner,.svc-block,.svc-block.reverse,.founder-inner{grid-template-columns:1fr!important;direction:ltr!important;}
+  .svc-block{padding:40px 0!important;}
+  .ai-feature{padding:32px 20px!important;}
+  .af-title{font-size:26px!important;}
+
+  .stitle,.sec-title,.qqt,.atitle,.bring-title,.culture-title,.ctat,.ctat,.founder-name{font-size:28px!important;letter-spacing:-.5px!important;}
+  .ssub,.sec-sub,.hero-sub{max-width:100%!important;}
+
+  .promise-strip{padding:48px 20px!important;}
+  .promise-strip-inner{grid-template-columns:1fr!important;}
+  .ps-card{flex-direction:column;}
+
+  .qs{padding:48px 20px!important;}
+  .qi{grid-template-columns:1fr!important;}
+
+  .divr{padding:28px 20px;}
+
+  .cta-section{padding:48px 20px!important;}
+  .cta-inner,.ctas{grid-template-columns:1fr!important;gap:32px!important;padding:48px 20px!important;}
+  .ctat{font-size:28px!important;}
+  .cta-btns,.ctab{flex-direction:column;align-items:center;}
+  .btn-white,.btn-outline-white,.btn-p,.btn-g{width:100%;max-width:320px;}
+
+  .main{grid-template-columns:1fr!important;padding:0 20px 48px!important;}
+  .right-col{gap:16px;}
+
+  .founder-inner{grid-template-columns:1fr!important;gap:28px!important;text-align:center;}
+  .founder-avatar{margin:0 auto;}
+  .founder-creds{justify-content:center;}
+
+  .culture-stats{gap:12px;}
+  .culture-stat{padding:18px 20px;}
+
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}
+
+  .lbl{font-size:11px;}
+  .book-card{padding:24px;}
+  .contact-card,.promise-card{padding:24px;}
+
+  .ai-section,.ais{padding:48px 20px!important;}
+}
+
+@media(max-width:480px){
+  h1{font-size:30px!important;}
+  .hero-stats{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr!important;}
+  .tech-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr!important;}
+  .hc-bar{flex-direction:column;gap:12px;}
+  .cs-metrics{flex-direction:column;}
+  .cs-metric{border-right:none;border-bottom:1px solid #e4e9f0;}
+  .cs-metric:last-child{border-bottom:none;}
+}
+/* ===== END MOBILE ===== */
+
+  .nav-links li a{text-decoration:none;color:inherit;}
+  .nav-links li a:hover{color:#0057FF;}
+  .nav-links li.active a{color:#0057FF;font-weight:600;}
+  a.btn-ghost-sm{text-decoration:none;display:inline-block;}
+  a.btn-blue{text-decoration:none;display:inline-block;}
+
+  a.btn-p,a.btn-g,a.btn-white,a.btn-outline-white,a.abtn,a.af-btn,a.book-btn{text-decoration:none;display:inline-block;text-align:center;}
+  a.svc-link{text-decoration:none;}
+  a.cb{text-decoration:none;display:block;}
+  a.ec{display:block;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;">
+    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+      <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+      <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+      <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+      <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+      <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+      <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+      <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+      <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+    </svg>
+  </a>
+      <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-engineering.html">AI Engineering</a></li>
+    <li><a href="technologies.html">Technologies</a></li>
+    <li class="active"><a href="industries.html">Industries</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="case-studies.html" class="btn-ghost-sm">Our work</a>
+    <a href="contact.html" class="btn-blue">Book a call</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a>
+  <a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-cta" onclick="location.href='contact.html'">Book a free call</button>
+</div>
+
+<!-- HERO -->
+<section style="background:#fff;">
+  <div class="hero">
+    <div class="eyebrow"><div class="dot"></div>Who we serve</div>
+    <h1>Built-in industry knowledge, <span class="bl">not a learning curve</span></h1>
+    <p class="hero-sub">We've worked inside companies across cybersecurity, enterprise software, hospitality tech, financial services, energy, and more — for over 11 years. Our engineers understand the problems your industry faces before they write a line of code.</p>
+    <div class="stats-row">
+      <div class="stat-cell"><div class="stat-n">11+</div><div class="stat-l">Years in the US market</div></div>
+      <div class="stat-cell"><div class="stat-n">15+</div><div class="stat-l">Industries served</div></div>
+      <div class="stat-cell"><div class="stat-n">300+</div><div class="stat-l">Engineers placed</div></div>
+      <div class="stat-cell"><div class="stat-n">8+ yrs</div><div class="stat-l">Average client relationship</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="lbl">Industries</div>
+  <div class="stitle">Sectors we know deeply</div>
+  <p class="ssub">We don't claim to serve every industry equally. These are the sectors where we have real, proven delivery experience.</p>
+
+  <div class="ind-grid">
+
+    <div class="ind-card">
+      <div class="ind-icon ic-blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="ind-title">Cybersecurity</div>
+      <div class="ind-desc">We embed engineering teams inside security software companies — building threat detection platforms, phishing prevention systems, vulnerability management tools, and compliance infrastructure. Security is one of our longest-standing areas of expertise.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Threat detection</span>
+        <span class="ind-tag">Phishing prevention</span>
+        <span class="ind-tag">Security platforms</span>
+        <span class="ind-tag">Compliance tooling</span>
+        <span class="ind-tag">Pen testing support</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="ind-title">Enterprise SaaS</div>
+      <div class="ind-desc">Our largest area of delivery. We build and maintain complex enterprise software products — data synchronization platforms, management systems, search and marketplace engines — for companies that need reliable, scalable engineering capacity over the long term.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Platform development</span>
+        <span class="ind-tag">Data sync & management</span>
+        <span class="ind-tag">Search engines</span>
+        <span class="ind-tag">Legacy modernization</span>
+        <span class="ind-tag">API integrations</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BA7517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="ind-title">Hospitality & WiFi Technology</div>
+      <div class="ind-desc">We support companies providing managed WiFi and connectivity infrastructure to major hotel chains and hospitality groups. Our teams build the software that powers network management, user authentication, and guest experience systems at scale.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Network management</span>
+        <span class="ind-tag">WiFi infrastructure</span>
+        <span class="ind-tag">Guest experience</span>
+        <span class="ind-tag">Hotel tech</span>
+        <span class="ind-tag">UX-focused development</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <div class="ind-title">Financial Services & Investment</div>
+      <div class="ind-desc">We have delivered engineering work for financial services companies and investment firms — building security infrastructure, data management tools, and compliance-sensitive software where reliability and accuracy are non-negotiable.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Security software</span>
+        <span class="ind-tag">Investment platforms</span>
+        <span class="ind-tag">Data management</span>
+        <span class="ind-tag">Compliance tooling</span>
+        <span class="ind-tag">PE-backed companies</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-coral"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#993C1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+      <div class="ind-title">Construction & Equipment Tech</div>
+      <div class="ind-desc">We build and maintain marketplace and data platforms for companies in the construction and agricultural equipment sector — including search, listing, and transaction systems that connect buyers and sellers at volume.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Marketplace platforms</span>
+        <span class="ind-tag">Equipment data</span>
+        <span class="ind-tag">Legacy system maintenance</span>
+        <span class="ind-tag">Search & discovery</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <div class="ind-title">Renewable Energy & Industrial</div>
+      <div class="ind-desc">We've supported engineering teams in the renewable energy and industrial sectors — building monitoring systems, operational platforms, and data infrastructure for companies managing complex physical assets and energy systems.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Energy monitoring</span>
+        <span class="ind-tag">Operations software</span>
+        <span class="ind-tag">Industrial platforms</span>
+        <span class="ind-tag">Data infrastructure</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-red"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><path d="M9 3H7a2 2 0 00-2 2v2M9 21H7a2 2 0 01-2-2v-2M15 3h2a2 2 0 012 2v2M15 21h2a2 2 0 002-2v-2M3 9v2M3 13v2M21 9v2M21 13v2"/></svg></div>
+      <div class="ind-title">Semiconductor & Electronic Parts</div>
+      <div class="ind-desc">We develop and run high-performance search and marketplace platforms for companies operating in the semiconductor and electronic parts supply chain — handling large-scale data, complex search logic, and buyer-seller matching at volume.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Parts search engines</span>
+        <span class="ind-tag">Marketplace platforms</span>
+        <span class="ind-tag">Supply chain data</span>
+        <span class="ind-tag">Database optimization</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-gray"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5F5E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+      <div class="ind-title">Food Service & Catering Tech</div>
+      <div class="ind-desc">We've helped food service and catering businesses modernize their operations — replacing manual processes with integrated software systems, including nutritional data integrations, order management, and operational workflows.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">Operations software</span>
+        <span class="ind-tag">Nutritional data integration</span>
+        <span class="ind-tag">Process modernization</span>
+        <span class="ind-tag">Custom workflows</span>
+      </div>
+    </div>
+
+    <div class="ind-card">
+      <div class="ind-icon ic-blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/><line x1="12" y1="5.5" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="18.5"/><line x1="5.5" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="18.5" y2="12"/></svg></div>
+      <div class="ind-title">AI & Emerging Technology</div>
+      <div class="ind-desc">We are actively building production AI for large enterprises — autonomous agents, enterprise chatbots, and deep integrations across business workflows. This is our fastest-growing area and where we are investing the most engineering depth right now.</div>
+      <div class="ind-tags">
+        <span class="ind-tag">AI agents</span>
+        <span class="ind-tag">Enterprise chatbots</span>
+        <span class="ind-tag">Workflow automation</span>
+        <span class="ind-tag">RAG systems</span>
+        <span class="ind-tag">LLM integration</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT WE BRING -->
+<section class="bring">
+  <div class="bring-inner">
+    <div>
+      <div class="lbl">Our approach</div>
+      <div class="bring-title">We don't start from zero in your industry</div>
+      <p class="bring-sub">When you bring C3S in, you get engineers who have seen your problems before — in companies like yours, at the same scale, with the same constraints. That means faster ramp time, fewer mistakes, and better judgment calls.</p>
+      <blockquote class="bring-quote">"Our engineers don't just execute tickets. They understand the domain, ask the right questions, and flag problems before they become yours."</blockquote>
+    </div>
+    <div class="bring-cards">
+      <div class="bring-card">
+        <div class="bc-icon">◎</div>
+        <div>
+          <div class="bc-title">Domain-aware engineers</div>
+          <div class="bc-desc">We match engineers to engagements based on both technical skill and industry familiarity — so your team isn't explaining the basics from day one.</div>
+        </div>
+      </div>
+      <div class="bring-card">
+        <div class="bc-icon">⚡</div>
+        <div>
+          <div class="bc-title">Faster time to productivity</div>
+          <div class="bc-desc">Industry experience shortens the ramp. Our engineers ask better questions, make better decisions, and contribute meaningfully from week one.</div>
+        </div>
+      </div>
+      <div class="bring-card">
+        <div class="bc-icon">✓</div>
+        <div>
+          <div class="bc-title">Long-term partnerships</div>
+          <div class="bc-desc">Our average client relationship spans multiple years. We stay because we understand your business deeply — and because we deliver.</div>
+        </div>
+      </div>
+      <div class="bring-card">
+        <div class="bc-icon">◈</div>
+        <div>
+          <div class="bc-title">Not your industry? Ask us anyway</div>
+          <div class="bc-desc">If you don't see your sector listed, reach out. We've delivered across 15+ industries and are continuously expanding. Strong engineering crosses industry lines.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise-strip">
+  <div class="promise-strip-inner">
+    <div class="ps-card">
+      <div class="ps-icon teal">◎</div>
+      <div>
+        <div class="ps-tag teal">Included at no cost</div>
+        <div class="ps-title">A dedicated Project Manager from day one</div>
+        <div class="ps-desc">Every C3S client gets a dedicated PM at no extra charge — your single point of contact for communication, updates, and day-to-day coordination. You always know where things stand.</div>
+      </div>
+    </div>
+    <div class="ps-card">
+      <div class="ps-icon blue">⚡</div>
+      <div>
+        <div class="ps-tag blue">Our confidence guarantee</div>
+        <div class="ps-title">Not happy? Walk away in weeks — not months</div>
+        <div class="ps-desc">We don't lock you into long contracts. If we're not delivering to your standard, terminate with just a few weeks of notice. No penalties. We offer this because we back our work completely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divr">
+  <div class="dl"></div>
+  <svg viewBox="0 0 220 52" width="140" height="32" xmlns="http://www.w3.org/2000/svg" style="opacity:.3;">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="dl"></div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="ctat">Is C3S a fit for your industry?</div>
+  <p class="ctasb">Tell us what you're building and where you operate. We'll be direct about whether we're the right team for it.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-white">Book a free 30-min call</a>
+    <a href="case-studies.html" class="btn-outline-white">See our case studies</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="fl">
+    <a href="index.html">Services</a>
+    <a href="ai-engineering.html">AI Engineering</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="industries.html">Industries</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="fc">© 2026 C3S Software · Cairo, Egypt · US-Facing Operations</div>
+</footer>
+
+</body>
+</html>

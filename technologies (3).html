@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technologies | C3S Software</title>
+<meta name="description" content="C3S engineers work across the full modern tech stack — web, mobile, cloud, DevOps, AI/ML, blockchain, and more. Built for US companies that need real engineering depth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Epilogue',sans-serif;color:#0d1b2a;background:#fff;overflow-x:hidden;}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;border-bottom:1px solid #e4e9f0;background:#fff;position:sticky;top:0;z-index:100;}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:14px;color:#4a5a6b;}
+.nav-links li{cursor:pointer;transition:color .15s;}
+.nav-links li:hover{color:#0057FF;}
+.nav-links li.active{color:#0057FF;font-weight:600;}
+.nav-right{display:flex;gap:12px;}
+.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* HERO */
+.hero{padding:80px 56px 64px;max-width:1140px;margin:0 auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:28px;letter-spacing:.6px;text-transform:uppercase;}
+.dot{width:7px;height:7px;border-radius:50%;background:#0057FF;animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:52px;font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:#0d1b2a;margin-bottom:22px;}
+h1 .bl{color:#0057FF;}
+.hero-sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:620px;margin:0 auto;}
+
+/* CATEGORY NAV */
+.cat-nav{background:#f6f8fc;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;padding:0 56px;overflow-x:auto;}
+.cat-nav-inner{display:flex;gap:0;max-width:1140px;margin:0 auto;}
+.cat-link{padding:18px 24px;font-size:13px;font-weight:500;color:#4a5a6b;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .15s;}
+.cat-link:hover{color:#0057FF;}
+.cat-link.active{color:#0057FF;border-bottom-color:#0057FF;}
+
+/* SECTIONS */
+.tech-section{padding:72px 56px;max-width:1140px;margin:0 auto;border-bottom:1px solid #e4e9f0;}
+.tech-section:last-of-type{border-bottom:none;}
+.sec-header{display:flex;align-items:center;gap:16px;margin-bottom:48px;}
+.sec-icon{width:52px;height:52px;border-radius:12px;background:#EEF4FF;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.sec-icon.ai{background:#E1F5EE;}
+.sec-icon.mobile{background:#FAEEDA;}
+.sec-icon.cloud{background:#EEF4FF;}
+.sec-icon.devops{background:#FAECE7;}
+.sec-icon.blockchain{background:#EEEDFE;}
+.sec-icon.db{background:#EAF3DE;}
+.sec-icon.qa{background:#FCEBEB;}
+.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.sec-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:800;color:#0d1b2a;letter-spacing:-.5px;}
+.new-badge{display:inline-block;background:#0ABFBF;color:#fff;font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;margin-left:10px;letter-spacing:.5px;vertical-align:middle;}
+
+/* TECH GRID */
+.tech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:#e4e9f0;border:1px solid #e4e9f0;border-radius:14px;overflow:hidden;}
+.tech-item{background:#fff;padding:28px 30px;transition:background .15s;}
+.tech-item:hover{background:#f4f7ff;}
+.tech-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.tech-desc{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+.tech-tag{display:inline-block;background:#EEF4FF;color:#0057FF;font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;margin-left:8px;letter-spacing:.3px;}
+.tech-tag.new{background:#E1F5EE;color:#0F6E56;}
+
+/* SUB CATEGORIES */
+.sub-cats{display:flex;flex-direction:column;gap:40px;}
+.sub-cat-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;color:#0d1b2a;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #e4e9f0;display:flex;align-items:center;gap:10px;}
+
+/* STACK PILLS */
+.pill-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.pill{background:#f6f8fc;border:1px solid #e4e9f0;border-radius:8px;padding:10px 16px;font-size:13px;color:#4a5a6b;font-weight:400;transition:all .15s;cursor:default;}
+.pill:hover{background:#EEF4FF;border-color:#0057FF;color:#0057FF;}
+.pill.new{border-color:#0ABFBF;color:#0F6E56;background:#E1F5EE;}
+
+/* CTA */
+.cta-section{background:#0057FF;padding:72px 56px;text-align:center;}
+.ctat{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#fff;line-height:1.1;margin-bottom:14px;}
+.ctasb{font-size:16px;color:#b8d0ff;font-weight:300;line-height:1.65;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:#fff;color:#0057FF;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;}
+
+/* DIVIDER */
+.divr{padding:38px 56px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid #e4e9f0;}
+.dl{flex:1;height:1px;background:#e4e9f0;max-width:200px;}
+
+footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.fl{display:flex;gap:24px;}
+.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;}
+.fl a:hover{color:#fff;}
+.fc{font-size:12px;color:#4a5a6b;}
+
+
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+  .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
+  .mobile-menu a:hover{color:#0057FF;}
+  .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+  .mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+  @media(max-width:768px){.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}}
+  /* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  nav{padding:14px 20px;flex-wrap:wrap;gap:12px;}
+  nav svg{width:130px;height:30px;}
+  .nav-links{display:none;}
+  .nav-right{gap:8px;}
+  .btn-ghost-sm{padding:8px 14px;font-size:12px;}
+  .btn-blue{padding:8px 14px;font-size:12px;}
+
+  .hero{padding:48px 20px 40px;grid-template-columns:1fr!important;gap:32px!important;text-align:center;}
+  h1{font-size:36px!important;letter-spacing:-1px!important;margin-left:auto;margin-right:auto;}
+  h1 .bl{display:inline;}
+  .hero-sub,.hero-sub p{font-size:15px!important;max-width:100%!important;}
+  .btns{justify-content:center;flex-direction:column;align-items:center;}
+  .btn-p,.btn-g{width:100%;max-width:320px;}
+  .hero-stats{grid-template-columns:1fr 1fr!important;}
+  .hero-card{padding:24px;}
+  .hc-bar{flex-wrap:wrap;gap:16px;}
+
+  .stats-row{flex-wrap:wrap;margin:0;}
+  .stat-cell{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+  .sc{min-width:50%;border-right:none;border-bottom:1px solid #e4e9f0;}
+
+  .ticker{padding:12px 0;}
+  .ti{padding:0 16px;font-size:11px;}
+
+  .section{padding:48px 20px;}
+  .sec,.tech-section,.svc-section,.ds,.diff-section,.cases-section,.css,.faq,.team,.values,.story,.founder-inner,.about-inner,.culture{padding:48px 20px!important;}
+  .exp-grid{grid-template-columns:1fr!important;}
+  .ind-grid{grid-template-columns:1fr!important;}
+  .caps-grid{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr 1fr!important;}
+  .tech-grid{grid-template-columns:1fr 1fr!important;}
+  .dg,.diff-grid{grid-template-columns:1fr!important;}
+  .csg,.cases-grid{grid-template-columns:1fr!important;}
+  .models-grid{grid-template-columns:1fr!important;}
+  .faq-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr 1fr!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .cs-grid{grid-template-columns:1fr!important;}
+
+  .story-inner,.qi,.aii,.aii,.how-inner,.bring-inner,.culture-inner,.promise-strip-inner,.ai-feature,.hero,.ctas,.cta-section .cta-inner,.svc-block,.svc-block.reverse,.founder-inner{grid-template-columns:1fr!important;direction:ltr!important;}
+  .svc-block{padding:40px 0!important;}
+  .ai-feature{padding:32px 20px!important;}
+  .af-title{font-size:26px!important;}
+
+  .stitle,.sec-title,.qqt,.atitle,.bring-title,.culture-title,.ctat,.ctat,.founder-name{font-size:28px!important;letter-spacing:-.5px!important;}
+  .ssub,.sec-sub,.hero-sub{max-width:100%!important;}
+
+  .promise-strip{padding:48px 20px!important;}
+  .promise-strip-inner{grid-template-columns:1fr!important;}
+  .ps-card{flex-direction:column;}
+
+  .qs{padding:48px 20px!important;}
+  .qi{grid-template-columns:1fr!important;}
+
+  .divr{padding:28px 20px;}
+
+  .cta-section{padding:48px 20px!important;}
+  .cta-inner,.ctas{grid-template-columns:1fr!important;gap:32px!important;padding:48px 20px!important;}
+  .ctat{font-size:28px!important;}
+  .cta-btns,.ctab{flex-direction:column;align-items:center;}
+  .btn-white,.btn-outline-white,.btn-p,.btn-g{width:100%;max-width:320px;}
+
+  .main{grid-template-columns:1fr!important;padding:0 20px 48px!important;}
+  .right-col{gap:16px;}
+
+  .founder-inner{grid-template-columns:1fr!important;gap:28px!important;text-align:center;}
+  .founder-avatar{margin:0 auto;}
+  .founder-creds{justify-content:center;}
+
+  .culture-stats{gap:12px;}
+  .culture-stat{padding:18px 20px;}
+
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}
+
+  .lbl{font-size:11px;}
+  .book-card{padding:24px;}
+  .contact-card,.promise-card{padding:24px;}
+
+  .ai-section,.ais{padding:48px 20px!important;}
+}
+
+@media(max-width:480px){
+  h1{font-size:30px!important;}
+  .hero-stats{grid-template-columns:1fr!important;}
+  .how-steps{grid-template-columns:1fr!important;}
+  .tech-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr!important;}
+  .hc-bar{flex-direction:column;gap:12px;}
+  .cs-metrics{flex-direction:column;}
+  .cs-metric{border-right:none;border-bottom:1px solid #e4e9f0;}
+  .cs-metric:last-child{border-bottom:none;}
+}
+/* ===== END MOBILE ===== */
+
+  .nav-links li a{text-decoration:none;color:inherit;}
+  .nav-links li a:hover{color:#0057FF;}
+  .nav-links li.active a{color:#0057FF;font-weight:600;}
+  a.btn-ghost-sm{text-decoration:none;display:inline-block;}
+  a.btn-blue{text-decoration:none;display:inline-block;}
+
+  a.btn-p,a.btn-g,a.btn-white,a.btn-outline-white,a.abtn,a.af-btn,a.book-btn{text-decoration:none;display:inline-block;text-align:center;}
+  a.svc-link{text-decoration:none;}
+  a.cb{text-decoration:none;display:block;}
+  a.ec{display:block;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;">
+    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+      <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+      <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+      <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+      <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+      <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+      <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+      <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+      <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+    </svg>
+  </a>
+      <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-engineering.html">AI Engineering</a></li>
+    <li class="active"><a href="technologies.html">Technologies</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="case-studies.html" class="btn-ghost-sm">Our work</a>
+    <a href="contact.html" class="btn-blue">Book a call</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a>
+  <a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-cta" onclick="location.href='contact.html'">Book a free call</button>
+</div>
+
+<!-- HERO -->
+<section style="background:#fff;">
+  <div class="hero">
+    <div class="eyebrow"><div class="dot"></div>Our tech stack</div>
+    <h1>Deep expertise across the <span class="bl">full modern stack</span></h1>
+    <p class="hero-sub">Our engineers work across web, mobile, cloud, DevOps, AI, and more — with the depth to build production systems, not just prototypes. If you don't see a technology listed, ask us. We're continuously expanding.</p>
+  </div>
+</section>
+
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <div class="cat-nav-inner">
+    <div class="cat-link active">AI & Machine Learning</div>
+    <div class="cat-link">Web Application</div>
+    <div class="cat-link">Mobile</div>
+    <div class="cat-link">Cloud</div>
+    <div class="cat-link">DevOps</div>
+    <div class="cat-link">Databases</div>
+    <div class="cat-link">Blockchain</div>
+    <div class="cat-link">QA & Testing</div>
+  </div>
+</div>
+
+<!-- AI & ML -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon ai">◈</div>
+    <div>
+      <div class="lbl">New capability</div>
+      <div class="sec-title">AI & Machine Learning <span class="new-badge">NEW</span></div>
+    </div>
+  </div>
+  <div class="sub-cats">
+    <div>
+      <div class="sub-cat-title">AI Platforms & Models</div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-name">AWS Bedrock </div>
+          <div class="tech-desc">Our primary platform for enterprise AI agent implementation. We build autonomous agents, RAG systems, and enterprise chatbots on Bedrock's managed foundation models.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">OpenAI / GPT-4</div>
+          <div class="tech-desc">We integrate OpenAI's models into enterprise applications — from intelligent assistants to automated workflows and document processing.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Azure OpenAI</div>
+          <div class="tech-desc">Enterprise-grade OpenAI models deployed within Azure's secure infrastructure — ideal for clients with Microsoft-first environments.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Google Vertex AI</div>
+          <div class="tech-desc">Google Cloud's managed ML platform for building, deploying, and scaling AI models with native GCP integration.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Anthropic Claude</div>
+          <div class="tech-desc">Long-context, safety-focused AI models for complex document analysis, enterprise reasoning, and nuanced language tasks.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Hugging Face</div>
+          <div class="tech-desc">Open-source model hub for fine-tuning and deploying custom ML models — used when client data requires bespoke training.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">Agent Frameworks & Tooling</div>
+      <div class="pill-grid">
+        <div class="pill">LangChain</div>
+        <div class="pill">LangGraph</div>
+        <div class="pill">AutoGen</div>
+        <div class="pill">CrewAI</div>
+        <div class="pill">LlamaIndex</div>
+        <div class="pill">Semantic Kernel</div>
+        <div class="pill">Pinecone</div>
+        <div class="pill">Weaviate</div>
+        <div class="pill">pgvector</div>
+        <div class="pill">Elasticsearch</div>
+        <div class="pill">MLflow</div>
+        <div class="pill">Python · FastAPI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEB APPLICATION -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon">⚙</div>
+    <div>
+      <div class="lbl">Web Application Technologies</div>
+      <div class="sec-title">Web Application Technologies</div>
+    </div>
+  </div>
+  <div class="sub-cats">
+    <div>
+      <div class="sub-cat-title">Backend Frameworks</div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-name">Spring Boot</div>
+          <div class="tech-desc">A powerful Java-based framework for building high-performance, easily maintainable microservices and web applications at scale.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Django</div>
+          <div class="tech-desc">A full-stack Python web framework enabling rapid, clean development. We build efficient, secure, and scalable web applications across industries.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Node.js / Express</div>
+          <div class="tech-desc">High-performance JavaScript runtime for building fast, scalable APIs and real-time applications with a non-blocking I/O model.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Laravel</div>
+          <div class="tech-desc">A PHP framework with elegant syntax and powerful tooling. We leverage its modular architecture to deliver robust, maintainable web applications.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">FastAPI </div>
+          <div class="tech-desc">High-performance Python API framework — our go-to for AI/ML backends, data pipelines, and modern microservice architectures.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Play Framework</div>
+          <div class="tech-desc">A lightweight, stateless web framework built on Akka — ideal for highly scalable, reactive applications with predictable resource consumption.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">Frontend Frameworks</div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-name">React / Next.js</div>
+          <div class="tech-desc">Our primary frontend framework for building fast, interactive, and SEO-friendly web applications with server-side rendering and modern component architecture.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Angular</div>
+          <div class="tech-desc">A versatile, open-source framework for building dynamic, responsive enterprise applications with rich functionality and seamless user experiences.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Vue.js</div>
+          <div class="tech-desc">A lightweight, progressive JavaScript framework delivering high-quality reactive interfaces. We use Vue's flexibility and modularity for modern web applications.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">TypeScript </div>
+          <div class="tech-desc">We build all major frontend projects in TypeScript — providing type safety, better tooling, and more maintainable codebases at scale.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">Languages</div>
+      <div class="pill-grid">
+        <div class="pill">Java</div>
+        <div class="pill">Python</div>
+        <div class="pill">JavaScript</div>
+        <div class="pill">TypeScript</div>
+        <div class="pill">C#</div>
+        <div class="pill">C++</div>
+        <div class="pill">PHP</div>
+        <div class="pill">Go </div>
+        <div class="pill">Rust </div>
+        <div class="pill">Scala</div>
+        <div class="pill">Kotlin</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon mobile">◎</div>
+    <div>
+      <div class="lbl">Mobile Technologies</div>
+      <div class="sec-title">Mobile Technologies</div>
+    </div>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-item">
+      <div class="tech-name">Flutter </div>
+      <div class="tech-desc">Our preferred cross-platform framework — build natively compiled iOS and Android apps from a single codebase, with expressive UI and high performance.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">React Native</div>
+      <div class="tech-desc">Cross-platform mobile development leveraging React's component model — ideal for teams with existing React web expertise.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Android (Kotlin / Java)</div>
+      <div class="tech-desc">Native Android development with extensive experience building feature-rich, scalable applications using the latest Android tools and best practices.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">iOS (Swift / Objective-C)</div>
+      <div class="tech-desc">Native iOS development in Swift and Objective-C — delivering high-performance, visually polished applications for iPhone and iPad.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUD -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon cloud">☁</div>
+    <div>
+      <div class="lbl">Cloud Technologies</div>
+      <div class="sec-title">Cloud Technologies</div>
+    </div>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-item">
+      <div class="tech-name">AWS </div>
+      <div class="tech-desc">Our primary cloud platform. We design, deploy, and manage scalable, secure, cost-effective cloud solutions — including Bedrock for AI workloads, EC2, Lambda, S3, RDS, and more.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Microsoft Azure</div>
+      <div class="tech-desc">Full Azure expertise including Azure OpenAI, App Services, Azure DevOps, and enterprise integrations with Microsoft 365 and Active Directory.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Google Cloud Platform</div>
+      <div class="tech-desc">GCP infrastructure, Vertex AI, BigQuery, and Cloud Run — we leverage Google Cloud's data and ML capabilities for analytics-heavy and AI-first architectures.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Multi-Cloud Architecture </div>
+      <div class="tech-desc">We design cloud-agnostic architectures that avoid vendor lock-in — giving clients flexibility to scale across AWS, Azure, and GCP as needs evolve.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVOPS -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon devops">↺</div>
+    <div>
+      <div class="lbl">DevOps Technologies</div>
+      <div class="sec-title">DevOps Technologies</div>
+    </div>
+  </div>
+  <div class="sub-cats">
+    <div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-name">Docker</div>
+          <div class="tech-desc">Containerization for consistent, portable environments across development, testing, and production — integrated with CI/CD pipelines for rapid delivery.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Kubernetes (K8s)</div>
+          <div class="tech-desc">We deploy and manage Kubernetes clusters for efficient container orchestration, auto-scaling, and fault-tolerant infrastructure for mission-critical applications.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Terraform</div>
+          <div class="tech-desc">Infrastructure as Code for automated, repeatable provisioning across cloud platforms — ensuring consistency, version control, and rapid environment setup.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Harness</div>
+          <div class="tech-desc">Continuous delivery platform that automates and simplifies deployment pipelines — ensuring reliable, fast, and secure software releases across environments.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">Jenkins</div>
+          <div class="tech-desc">Open-source automation server for CI/CD pipelines — we use Jenkins to automate build, test, and deployment processes and accelerate delivery velocity.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">GitHub Actions </div>
+          <div class="tech-desc">Native CI/CD automation built into GitHub — our preferred pipeline tool for modern projects needing fast, maintainable, code-adjacent automation.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">Cloud DevOps</div>
+      <div class="pill-grid">
+        <div class="pill">AWS DevOps (CodePipeline · CodeBuild · CodeDeploy)</div>
+        <div class="pill">Azure DevOps (Repos · Pipelines · Artifacts)</div>
+        <div class="pill">Google Cloud DevOps (Cloud Build · Cloud Deploy)</div>
+        <div class="pill">Datadog</div>
+        <div class="pill">Prometheus & Grafana</div>
+        <div class="pill">Ansible</div>
+        <div class="pill">Helm</div>
+        <div class="pill">ArgoCD</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATABASES -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon db">◑</div>
+    <div>
+      <div class="lbl">Database Engines</div>
+      <div class="sec-title">Database Engines</div>
+    </div>
+  </div>
+  <div class="sub-cats">
+    <div>
+      <div class="sub-cat-title">SQL / Relational</div>
+      <div class="pill-grid">
+        <div class="pill">PostgreSQL</div>
+        <div class="pill">MySQL</div>
+        <div class="pill">MariaDB</div>
+        <div class="pill">MS SQL Server</div>
+        <div class="pill">Amazon RDS</div>
+        <div class="pill">Azure SQL</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">NoSQL</div>
+      <div class="pill-grid">
+        <div class="pill">MongoDB</div>
+        <div class="pill">DynamoDB</div>
+        <div class="pill">Cassandra</div>
+        <div class="pill">Redis</div>
+        <div class="pill">NeptuneDB (Graph)</div>
+        <div class="pill">Elasticsearch</div>
+        <div class="pill">Firebase</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-cat-title">Vector Databases <span class="new-badge">AI</span></div>
+      <div class="pill-grid">
+        <div class="pill">Pinecone</div>
+        <div class="pill">Weaviate</div>
+        <div class="pill">pgvector</div>
+        <div class="pill">Qdrant</div>
+        <div class="pill">Chroma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCKCHAIN -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon blockchain">⬡</div>
+    <div>
+      <div class="lbl">Blockchain Technologies</div>
+      <div class="sec-title">Blockchain Technologies</div>
+    </div>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-item">
+      <div class="tech-name">Ethereum</div>
+      <div class="tech-desc">A powerful open-source blockchain platform for building decentralized applications using smart contracts. We have extensive experience building and deploying Ethereum-based solutions.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Hyperledger</div>
+      <div class="tech-desc">Enterprise-grade blockchain frameworks — Hyperledger Fabric and Sawtooth — for permissioned, scalable, and secure blockchain solutions tailored to industry-specific use cases.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Corda</div>
+      <div class="tech-desc">Distributed ledger technology built for businesses and financial institutions — enabling secure, private, and interoperable blockchain solutions with industry-specific architecture.</div>
+    </div>
+    <div class="tech-item">
+      <div class="tech-name">Solidity / Smart Contracts</div>
+      <div class="tech-desc">Smart contract development and auditing for Ethereum-compatible blockchains — from token standards to complex DeFi and enterprise contract logic.</div>
+    </div>
+  </div>
+</section>
+
+<!-- QA & TESTING -->
+<section class="tech-section">
+  <div class="sec-header">
+    <div class="sec-icon qa">✓</div>
+    <div>
+      <div class="lbl">QA & Test Automation</div>
+      <div class="sec-title">QA & Test Automation</div>
+    </div>
+  </div>
+  <div class="pill-grid">
+    <div class="pill">Selenium</div>
+    <div class="pill">Cypress</div>
+    <div class="pill">Playwright </div>
+    <div class="pill">Jest</div>
+    <div class="pill">JUnit</div>
+    <div class="pill">PyTest</div>
+    <div class="pill">Postman</div>
+    <div class="pill">k6 (Load Testing)</div>
+    <div class="pill">SonarQube</div>
+    <div class="pill">TestRail</div>
+    <div class="pill">AI-assisted test generation</div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divr">
+  <div class="dl"></div>
+  <svg viewBox="0 0 220 52" width="140" height="32" xmlns="http://www.w3.org/2000/svg" style="opacity:.3;">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="dl"></div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="ctat">Don't see your technology?</div>
+  <p class="ctasb">We're continuously expanding our expertise. If you need something specific, reach out — we'll tell you honestly whether we can help and how.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-white">Book a free consultation</a>
+    <a href="services.html" class="btn-outline-white">See our services</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
+    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/>
+    <line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
+    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/>
+    <circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
+  </svg>
+  <div class="fl">
+    <a href="index.html">Services</a>
+    <a href="ai-engineering.html">AI Engineering</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="fc">© 2026 C3S Software · Cairo, Egypt · US-Facing Operations</div>
+</footer>
+
+</body>
+</html>
