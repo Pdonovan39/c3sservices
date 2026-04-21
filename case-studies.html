@@ -5,15 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Case Studies | C3S Software</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <meta property="og:title" content="Case Studies | C3S Software">
-<meta property="og:description" content="Real outcomes from C3S engineering engagements — cloud migrations, performance optimization, QA automation, cybersecurity, and enterprise AI in production.">
+<meta property="og:description" content="Real problems solved. Real outcomes delivered — from cloud migrations to cybersecurity platforms and enterprise AI running in production.">
 <meta property="og:image" content="https://www.c3sservices.com/og-image.png">
-<meta property="og:url" content="https://www.c3sservices.com/case-studies.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Real outcomes from C3S engineering engagements — cloud migrations, performance optimization, QA automation, cybersecurity, and enterprise AI in production.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -21,364 +15,352 @@
 body{font-family:'Epilogue',sans-serif;color:#0d1b2a;background:#fff;overflow-x:hidden;}
 nav{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;border-bottom:1px solid #e4e9f0;background:#fff;position:sticky;top:0;z-index:100;}
 .nav-links{display:flex;gap:26px;list-style:none;font-size:14px;color:#4a5a6b;}
-.nav-links li{cursor:pointer;transition:color .15s;}
-.nav-links li:hover{color:#0057FF;}
-.nav-links li.active{color:#0057FF;font-weight:600;}
+.nav-links li a{text-decoration:none;color:inherit;transition:color .15s;}
+.nav-links li a:hover,.nav-links li a.active{color:#0057FF;font-weight:600;}
 .nav-right{display:flex;gap:12px;}
-.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;cursor:pointer;font-family:'Epilogue',sans-serif;}
-.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
-.hero{padding:88px 56px 72px;max-width:1140px;margin:0 auto;text-align:center;}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:28px;letter-spacing:.6px;text-transform:uppercase;}
-.dot{width:7px;height:7px;border-radius:50%;background:#0057FF;animation:bl 2s infinite;}
-@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
-h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:52px;font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:#0d1b2a;margin-bottom:22px;max-width:800px;margin-left:auto;margin-right:auto;}
-h1 .bl{color:#0057FF;}
-.hero-sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:580px;margin:0 auto;}
-.featured{padding:0 56px 80px;max-width:1140px;margin:0 auto;}
-.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
-.stitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;margin-bottom:8px;line-height:1.1;}
-.ssub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.65;margin-bottom:52px;max-width:520px;}
-.ai-feature{background:#0057FF;border-radius:16px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:28px;}
-.af-tag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
-.af-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;}
-.af-desc{font-size:15px;color:#b8d0ff;font-weight:300;line-height:1.7;margin-bottom:28px;}
-.af-btn{display:inline-block;background:#fff;color:#0057FF;padding:13px 26px;border-radius:7px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:'Epilogue',sans-serif;text-decoration:none;}
-.af-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:28px;}
-.af-card-tag{font-size:11px;font-weight:600;color:#93b8ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
-.af-points{display:flex;flex-direction:column;gap:12px;}
-.af-point{display:flex;align-items:flex-start;gap:10px;}
-.af-check{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;color:#fff;font-weight:700;}
-.af-pt{font-size:13px;color:#e0ecff;line-height:1.5;font-weight:300;}
-.af-quote{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#93b8ff;font-style:italic;line-height:1.5;}
-.cs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-.cs-card{border:1px solid #e4e9f0;border-radius:14px;overflow:hidden;transition:box-shadow .2s;}
-.cs-card:hover{box-shadow:0 4px 24px rgba(0,87,255,.08);}
-.cs-header{padding:32px 32px 24px;}
-.cs-ind{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.cs-ind-dot{width:6px;height:6px;border-radius:50%;background:#0057FF;}
-.cs-client{font-size:12px;color:#94a3b8;margin-bottom:10px;font-weight:400;}
-.cs-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:#0d1b2a;line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
-.cs-desc{font-size:14px;color:#4a5a6b;line-height:1.7;font-weight:300;}
-.cs-metrics{display:flex;gap:0;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
-.cs-metric{flex:1;padding:20px 24px;border-right:1px solid #e4e9f0;text-align:center;}
-.cs-metric:last-child{border-right:none;}
-.cs-metric-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:800;color:#0057FF;letter-spacing:-.5px;}
-.cs-metric-l{font-size:11px;color:#7a8fa6;margin-top:3px;font-weight:400;}
-.cs-body{padding:24px 32px;}
-.cs-section-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;color:#0d1b2a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
-.cs-section-text{font-size:13px;color:#4a5a6b;line-height:1.65;font-weight:300;margin-bottom:18px;}
-.cs-tags{display:flex;flex-wrap:wrap;gap:6px;padding:0 32px 28px;}
-.cs-tag{font-size:11px;background:#f6f8fc;border:1px solid #e4e9f0;color:#4a5a6b;padding:4px 10px;border-radius:6px;}
-.conf-badge{display:inline-flex;align-items:center;gap:5px;background:#f6f8fc;border:1px solid #e4e9f0;color:#7a8fa6;font-size:11px;padding:3px 10px;border-radius:10px;font-weight:400;}
-.cta-section{background:#0057FF;padding:78px 56px;text-align:center;}
-.ctat{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;letter-spacing:-1px;color:#fff;line-height:1.1;margin-bottom:14px;}
-.ctasb{font-size:16px;color:#b8d0ff;font-weight:300;line-height:1.65;margin-bottom:32px;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-white{background:#fff;color:#0057FF;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;}
-.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;}
-.divr{padding:38px 56px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:1px solid #e4e9f0;}
-.dl{flex:1;height:1px;background:#e4e9f0;max-width:200px;}
-footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.fl{display:flex;gap:24px;}
-.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;}
-.fl a:hover{color:#fff;}
-.fc{font-size:12px;color:#4a5a6b;}
+.btn-ghost-sm{background:transparent;color:#0d1b2a;border:1.5px solid #d0d8e4;padding:9px 20px;border-radius:6px;font-size:13px;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;transition:border-color .15s;}
+.btn-ghost-sm:hover{border-color:#0057FF;}
+.btn-blue{background:#0057FF;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;}
+.btn-p{background:#0057FF;color:#fff;border:none;padding:15px 32px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;text-align:center;}
+.btn-g{background:transparent;color:#0d1b2a;border:1.5px solid #c8d2de;padding:15px 32px;border-radius:7px;font-size:15px;cursor:pointer;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;text-align:center;}
+.btn-g:hover{border-color:#0057FF;}
+.btn-white{background:#fff;color:#0057FF;border:none;padding:14px 28px;border-radius:7px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:14px 28px;border-radius:7px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Epilogue',sans-serif;text-decoration:none;display:inline-block;}
+.btn-outline-white:hover{border-color:#fff;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
-.hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;transition:all .3s;}
+.hamburger span{display:block;width:22px;height:2px;background:#0d1b2a;border-radius:2px;}
 .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:999;flex-direction:column;padding:80px 32px 40px;gap:0;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{font-size:22px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;color:#0d1b2a;text-decoration:none;padding:16px 0;border-bottom:1px solid #e4e9f0;}
-.mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;font-family:sans-serif;}
+.mobile-menu a:hover{color:#0057FF;}
+.mobile-menu-close{position:absolute;top:20px;right:24px;font-size:28px;cursor:pointer;color:#0d1b2a;background:none;border:none;}
 .mobile-menu-cta{margin-top:32px;background:#0057FF;color:#fff;border:none;padding:16px;border-radius:8px;font-size:16px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;cursor:pointer;width:100%;}
+.lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.stitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;margin-bottom:8px;line-height:1.1;}
+.ssub{font-size:16px;color:#4a5a6b;font-weight:300;max-width:510px;line-height:1.65;margin-bottom:46px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#EEF4FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 18px;border-radius:20px;margin-bottom:24px;letter-spacing:.6px;text-transform:uppercase;}
+.page-hero{background:#f6f8fc;border-bottom:1px solid #e4e9f0;padding:72px 56px 64px;}
+.page-hero-inner{max-width:1140px;margin:0 auto;}
+.page-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:48px;font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:#0d1b2a;margin-bottom:18px;max-width:760px;}
+.page-hero .sub{font-size:17px;line-height:1.72;color:#4a5a6b;font-weight:300;max-width:600px;margin-bottom:32px;}
+.page-hero .btns{display:flex;gap:14px;flex-wrap:wrap;}
+.new-badge{display:inline-block;background:#EEF4FF;color:#0057FF;font-size:10px;font-weight:700;padding:2px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;margin-left:10px;vertical-align:middle;}
+.tab-row{display:flex;gap:8px;flex-wrap:wrap;}
+.tab-btn{background:#EEF4FF;color:#0057FF;border:none;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;font-family:'Epilogue',sans-serif;cursor:pointer;text-decoration:none;display:inline-block;letter-spacing:.3px;}
+.tab-btn:hover{background:#dce9ff;}
+.content{max-width:1140px;margin:0 auto;padding:0 56px 80px;}
+.section{padding:78px 56px;max-width:1140px;margin:0 auto;}
+.tech-block{padding:64px 0 0;}
+.tech-block+.tech-block{border-top:1px solid #e4e9f0;margin-top:64px;}
+.block-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:800;letter-spacing:-.5px;color:#0d1b2a;margin-bottom:6px;}
+.block-sub{font-size:14px;color:#7a8fa6;font-weight:300;margin-bottom:0;line-height:1.6;}
+.sub-label{font-size:11px;font-weight:600;color:#4a5a6b;text-transform:uppercase;letter-spacing:.7px;margin-bottom:16px;margin-top:32px;padding-top:24px;border-top:1px solid #f0f3f8;}
+.sub-label.first{border-top:none;padding-top:0;margin-top:24px;}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;}
+.card-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px;}
+.tc{background:#fff;border:1px solid #e4e9f0;border-radius:12px;padding:24px;transition:border-color .15s,box-shadow .15s;}
+.tc:hover{border-color:#0057FF;box-shadow:0 4px 20px rgba(0,87,255,.07);}
+.tc-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#0d1b2a;margin-bottom:7px;}
+.tc-desc{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+.tag-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.tag{display:inline-block;background:#f6f8fc;border:1px solid #e4e9f0;color:#4a5a6b;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;font-family:'Epilogue',sans-serif;}
+.tag.hi{background:#EEF4FF;border-color:#c5d9ff;color:#0057FF;font-weight:600;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.cta-strip{background:#0057FF;padding:56px;}
+.cta-strip-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.cta-strip-t{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:800;color:#fff;letter-spacing:-.5px;line-height:1.2;max-width:480px;}
+.cta-strip-sub{font-size:14px;color:#b8d0ff;font-weight:300;margin-top:8px;line-height:1.6;}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.promise-strip{background:#0d1b2a;padding:56px 56px;}
+.promise-strip-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.ps-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:32px;display:flex;gap:18px;align-items:flex-start;}
+.ps-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.ps-icon.teal{background:#0ABFBF;}.ps-icon.blue{background:#0057FF;}
+.ps-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+.ps-tag.teal{color:#0ABFBF;}.ps-tag.blue{color:#4d8eff;}
+.ps-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25;}
+.ps-desc{font-size:13px;color:#94a3b8;line-height:1.65;font-weight:300;}
+.dc{border:1px solid #e4e9f0;border-radius:12px;padding:30px;transition:border-color .15s;}
+.dc:hover{border-color:#0057FF;}
+.dn{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;color:#c8d2de;letter-spacing:1px;margin-bottom:13px;}
+.dt{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#0d1b2a;margin-bottom:8px;line-height:1.25;}
+.dd{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;}
+.qs{background:#f6f8fc;padding:78px 56px;border-top:1px solid #e4e9f0;border-bottom:1px solid #e4e9f0;}
+.qi{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.qqt{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;color:#0d1b2a;line-height:1.1;margin-bottom:14px;}
+.qsub{font-size:16px;color:#4a5a6b;font-weight:300;line-height:1.7;margin-bottom:26px;}
+.quote{border-left:3px solid #0057FF;padding-left:20px;font-size:14px;color:#4a5a6b;font-style:italic;line-height:1.7;font-weight:300;}
+.qcards{display:flex;flex-direction:column;gap:15px;}
+.qc{background:#fff;border:1px solid #e4e9f0;border-radius:10px;padding:22px;display:flex;gap:14px;align-items:flex-start;}
+.qico{width:40px;height:40px;border-radius:8px;background:#EEF4FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:#0057FF;}
+.qt{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:#0d1b2a;margin-bottom:4px;}
+.qd{font-size:13px;color:#7a8fa6;line-height:1.55;font-weight:300;}
+footer{background:#0d1b2a;padding:40px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.fl{display:flex;gap:24px;}
+.fl a{font-size:13px;color:#4a5a6b;text-decoration:none;transition:color .15s;}
+.fl a:hover{color:#fff;}
+.fc{font-size:12px;color:#4a5a6b;}
 @media(max-width:768px){
-.hamburger{display:flex;}.nav-right .btn-ghost-sm{display:none;}
-nav{padding:14px 20px;}.nav-links{display:none;}
-.hero{padding:48px 20px 40px;}h1{font-size:36px!important;}
-.featured{padding:0 20px 48px!important;}
-.ai-feature{padding:32px 20px!important;grid-template-columns:1fr!important;}
-.af-title{font-size:26px!important;}
-.cs-grid{grid-template-columns:1fr!important;}
-.cs-metrics{flex-direction:column;}
-.cs-metric{border-right:none;border-bottom:1px solid #e4e9f0;}
-.cs-metric:last-child{border-bottom:none;}
-.cta-section{padding:48px 20px!important;}.ctat{font-size:28px!important;}
-.cta-btns{flex-direction:column;align-items:center;}.btn-white,.btn-outline-white{width:100%;max-width:320px;}
-.divr{padding:28px 20px;}
-footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}.fl{flex-wrap:wrap;gap:14px;}}
-.nav-links li a{text-decoration:none;color:inherit;}
-.nav-links li.active a{color:#0057FF;font-weight:600;}
-a.btn-ghost-sm,a.btn-blue,a.btn-white,a.btn-outline-white{text-decoration:none;display:inline-block;text-align:center;}
+  nav{padding:14px 20px;}.nav-links{display:none;}.hamburger{display:flex;}
+  .page-hero{padding:48px 20px 40px;}.page-hero h1{font-size:30px;letter-spacing:-.5px;}
+  .content{padding:0 20px 60px;}.section{padding:48px 20px;}
+  .card-grid,.card-grid-2,.two-col,.dg,.qi,.promise-strip-inner{grid-template-columns:1fr!important;}
+  .cta-strip{padding:48px 20px;}.promise-strip{padding:48px 20px;}
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px;}
+  .fl{flex-wrap:wrap;gap:14px;}.stitle{font-size:28px;letter-spacing:-.5px;}
+}
+.css-hero-inner{max-width:1140px;margin:0 auto;}
+.featured-cs{background:#fff;border:1px solid #e4e9f0;border-radius:14px;overflow:hidden;margin-top:46px;}
+.fcs-top{background:#0057FF;padding:32px 36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.fcs-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.6px;text-transform:uppercase;}
+.fcs-body{display:grid;grid-template-columns:1fr auto;gap:0;}
+.fcs-main{padding:36px;border-right:1px solid #e4e9f0;}
+.fcs-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:#0d1b2a;line-height:1.25;margin-bottom:14px;}
+.fcs-summary{font-size:14px;color:#7a8fa6;line-height:1.7;font-weight:300;margin-bottom:20px;}
+.fcs-built-lbl{font-size:10px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px;}
+.fcs-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.fcs-list li{font-size:13px;color:#4a5a6b;display:flex;gap:8px;align-items:flex-start;line-height:1.55;}
+.fcs-list li::before{content:"✓";color:#0057FF;font-size:11px;margin-top:1px;flex-shrink:0;}
+.fcs-stats{padding:36px;min-width:200px;display:flex;flex-direction:column;gap:28px;justify-content:center;}
+.fcs-stat-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#0057FF;letter-spacing:-1px;margin-bottom:3px;}
+.fcs-stat-l{font-size:12px;color:#7a8fa6;}
+.cs-section-lbl{font-size:11px;font-weight:600;color:#0057FF;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:16px;border-bottom:1px solid #e4e9f0;margin-top:64px;}
+.cc{background:#fff;border:1px solid #e4e9f0;border-radius:12px;overflow:hidden;transition:box-shadow .15s;margin-bottom:16px;}
+.cc:hover{box-shadow:0 4px 20px rgba(0,87,255,.08);}
+.cc-inner{display:grid;grid-template-columns:1fr 220px;}
+.cc-body{padding:32px;border-right:1px solid #e4e9f0;}
+.cc-industry{font-size:10px;font-weight:700;color:#0057FF;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}
+.cc-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;color:#0d1b2a;line-height:1.3;margin-bottom:12px;}
+.cc-summary{font-size:13px;color:#7a8fa6;line-height:1.65;font-weight:300;margin-bottom:20px;}
+.cc-sections{display:flex;flex-direction:column;gap:14px;}
+.cc-sec-lbl{font-size:10px;font-weight:700;color:#4a5a6b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.cc-sec-txt{font-size:13px;color:#7a8fa6;line-height:1.6;font-weight:300;}
+.cc-tags{display:flex;flex-wrap:wrap;gap:6px;padding:16px 32px;border-top:1px solid #f0f3f8;}
+.ctag{display:inline-block;background:#f6f8fc;border:1px solid #e4e9f0;color:#4a5a6b;font-size:11px;padding:4px 10px;border-radius:20px;}
+.cc-sidebar{padding:32px;display:flex;flex-direction:column;gap:24px;justify-content:center;}
+.cc-stat-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;color:#0057FF;letter-spacing:-1px;margin-bottom:3px;}
+.cc-stat-l{font-size:12px;color:#7a8fa6;}
+@media(max-width:768px){.fcs-body,.cc-inner{grid-template-columns:1fr!important;}.fcs-stats,.cc-sidebar{border-top:1px solid #e4e9f0;}}
 </style>
 </head>
 <body>
 <nav>
   <a href="index.html" style="text-decoration:none;display:flex;align-items:center;"><svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
-    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
-    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
-    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
-    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
-    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
-    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
-    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
-    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
-    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
-    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
-  </svg>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="ai-engineering.html">AI Engineering</a></li>
-    <li><a href="technologies.html">Technologies</a></li>
-    <li><a href="industries.html">Industries</a></li>
-    <li class="active"><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-  </a>
+      <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/><circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+      <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/><line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
+      <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/><circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+      <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/><circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
+      <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/><line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
+      <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
+    </svg></a>
+  <ul class="nav-links"><li><a href="services.html">Services</a></li><li><a href="ai-engineering.html">AI Engineering</a></li><li><a href="technologies.html">Technologies</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html"  class="active">Case Studies</a></li><li><a href="about.html">About</a></li></ul>
   <div class="nav-right">
     <a href="case-studies.html" class="btn-ghost-sm">Our work</a>
     <a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-blue">Book a call</a>
   </div>
-  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="ai-engineering.html">AI Engineering</a>
-  <a href="technologies.html">Technologies</a>
-  <a href="industries.html">Industries</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&#x2715;</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="ai-engineering.html">AI Engineering</a>
+  <a href="technologies.html">Technologies</a><a href="industries.html">Industries</a>
+  <a href="case-studies.html">Case Studies</a><a href="about.html">About</a><a href="contact.html">Contact</a>
   <button class="mobile-menu-cta" onclick="window.open('https://calendly.com/pdonovan-c3s/30min','_blank')">Book a free call</button>
 </div>
-<section style="background:#fff;">
-  <div class="hero">
-    <div class="eyebrow"><div class="dot"></div>Proof of work</div>
-    <h1>Real problems solved. <span class="bl">Real outcomes delivered.</span></h1>
-    <p class="hero-sub">Real engagements. Real outcomes. From cloud migrations and performance overhauls to cybersecurity platforms and enterprise AI running in production.</p>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Proof of work</div>
+    <h1>Real problems solved. Real outcomes delivered.</h1>
+    <p class="sub">Real engagements. Real outcomes. From cloud migrations and performance overhauls to cybersecurity platforms and enterprise AI running in production.</p>
   </div>
-</section>
-<section class="featured">
-  <div class="lbl">Featured</div>
-  <div class="stitle">Our most recent work</div>
-  <p class="ssub">The hardest part of enterprise AI isn't the model. It's the integration, the context, and the trust.</p>
-  <div class="ai-feature">
-    <div>
-      <div class="af-tag">Enterprise AI · Active engagement</div>
-      <div class="af-title">From AI vision to agents running in production</div>
-      <p class="af-desc">A large enterprise had a clear vision for what AI could do for their business. What they needed were engineers who could actually build it — embedded inside their organization, working inside their stack, and accountable for the outcome.</p>
-      <a href="case-studies.html" class="af-btn">Read the full story</a>
-    </div>
-    <div class="af-card">
-      <div class="af-card-tag">What we built</div>
-      <div class="af-points">
-        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">AI agents that autonomously navigate complex enterprise workflows</div></div>
-        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">Enterprise chatbot trained on the client's own business knowledge</div></div>
-        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">Deep integrations into their existing enterprise technology stack</div></div>
-        <div class="af-point"><div class="af-check">✓</div><div class="af-pt">A scalable AI foundation the client owns and can extend independently</div></div>
-      </div>
-      <div class="af-quote">"We don't hand over slide decks. We embed as builders and deliver AI that works in the real world."</div>
-    </div>
-  </div>
-  <div class="cs-grid">
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Cybersecurity</div>
-        <div class="cs-client">Pulsar Security · pulsarsecurity.com</div>
-        <div class="cs-title">Cloud architecture to automate dark web scan execution at scale</div>
-        <p class="cs-desc">Pulsar Security's dark web scanning service was running as manual scripts on local machines. As their customer base grew, the manual process became a bottleneck. C3S built a fully automated cloud-native solution on AWS that runs multiple scans simultaneously and delivers real-time reports.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">100%</div><div class="cs-metric-l">Process automated</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">0</div><div class="cs-metric-l">Manual upload steps</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">AWS</div><div class="cs-metric-l">Lambda · S3 · Private cloud</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">Security admins manually executed scripts and uploaded results — time-consuming, error-prone, and impossible to scale as the client base grew.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">We built a serverless architecture using AWS Lambda to run scans simultaneously, centralized output storage in S3, and a real-time UI dashboard showing live scan logs over a secure socket connection.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">Security admins can now launch multiple dark web scans from the portal and generate client reports immediately upon completion — no file transfers, no manual steps.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">AWS Lambda</span><span class="cs-tag">S3</span><span class="cs-tag">Serverless</span><span class="cs-tag">Real-time UI</span><span class="cs-tag">Cybersecurity</span>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
-        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
-        <div class="cs-title">Fixing a slow, unresponsive system managing millions of supply chain records</div>
-        <p class="cs-desc">A global electronics distributor serving OEMs, military, and aerospace suppliers was running mission-critical software that had become dangerously slow. The system managed millions of database records and operated 24/7 — any slowdown meant operational disruption and customer risk.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">Millions</div><div class="cs-metric-l">Records optimized</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">24/7</div><div class="cs-metric-l">Uptime required</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">Global</div><div class="cs-metric-l">Client base served</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">High data volume caused severe performance degradation. Slow response times were creating inefficiencies and threatening customer relationships on a global scale.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">We optimized database indexing and SQL queries, introduced API paging to reduce data loads, and separated the warehouse data into a dedicated independent service with its own database and load balancing.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">A robust, scalable system capable of handling intensive data loads without performance compromise — with the architecture to grow as the client's business evolves.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">Database optimization</span><span class="cs-tag">SQL</span><span class="cs-tag">Microservices</span><span class="cs-tag">Load balancing</span><span class="cs-tag">API design</span>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
-        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
-        <div class="cs-title">Building a QA process from zero for a global supply chain platform</div>
-        <p class="cs-desc">One of the fastest-growing global independent electronics distributors had no software testing processes in place. Critical bugs were reaching production, disrupting operations and impacting their global client base — including major OEMs and aerospace suppliers.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">Zero</div><div class="cs-metric-l">Prior QA process</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">↓</div><div class="cs-metric-l">Critical errors in production</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">Auto</div><div class="cs-metric-l">Smoke testing implemented</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">No testing framework meant frequent critical-error releases that disrupted live operations, increased support costs, and damaged client confidence.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">We implemented manual testing for immediate stabilization, then systematically built an automated smoke testing pipeline prioritizing the most business-critical functions for every release.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">A stable, reliable software system — significantly fewer production rollbacks, reduced support costs, and increased client confidence across a global customer base.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">QA automation</span><span class="cs-tag">Smoke testing</span><span class="cs-tag">CI/CD</span><span class="cs-tag">Quality engineering</span>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Electronics Distribution & Supply Chain</div>
-        <div class="cs-client"><span class="conf-badge">Confidential client</span></div>
-        <div class="cs-title">UX overhaul that cut support calls and accelerated order processing</div>
-        <p class="cs-desc">The same global electronics distributor's product interface had become so complex that it was actively slowing down their operations. Overly dense screens were causing a surge in support calls and significantly slowing order processing and deal closure times.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">↓</div><div class="cs-metric-l">IT support calls</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">Faster</div><div class="cs-metric-l">Order processing</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">↑</div><div class="cs-metric-l">User productivity</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">Overly complex screens with excessive information density were blocking user productivity, increasing support overhead, and slowing down critical business workflows.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">We took a user-centric approach — gathering direct feedback, building multiple prototypes, iterating with stakeholders, and redesigning the interface around how users actually work.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">Faster order processing, fewer support calls, and a user base that enthusiastically adopted the new design. Deal closure times with suppliers and clients improved measurably.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">UX design</span><span class="cs-tag">User research</span><span class="cs-tag">Prototyping</span><span class="cs-tag">Product redesign</span>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Music & Fitness Technology</div>
-        <div class="cs-client">Reflex Radio · reflex-radio.com</div>
-        <div class="cs-title">AWS cloud migration delivered in less than half the estimated time</div>
-        <p class="cs-desc">Reflex Radio — a fitness music startup — needed to move off traditional hosting to a scalable AWS infrastructure. The challenge was their custom music engine, which had specific concurrency and scaling requirements that required a non-standard architecture approach.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">&lt;50%</div><div class="cs-metric-l">Of estimated timeline</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">AWS</div><div class="cs-metric-l">CDK · Beanstalk · RDS</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">CI/CD</div><div class="cs-metric-l">Automated deployments</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">Traditional hosting was difficult to scale and maintain. The music engine required careful concurrency handling — running on a shared server risked performance issues when auto-scaling triggered mid-execution.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">Lift-and-shift to AWS using CDK for infrastructure-as-code. Frontend on CloudFront/S3, backend on Elastic Beanstalk, database on RDS. A custom AWS script ensured the music engine ran only on the leading server in the auto-scaling group.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">Relaunched in less than half the estimated time with automated CI/CD pipelines, CloudWatch monitoring, robust firewalls, and dramatically reduced operational overhead.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">AWS CDK</span><span class="cs-tag">Elastic Beanstalk</span><span class="cs-tag">CloudFront</span><span class="cs-tag">CloudWatch</span><span class="cs-tag">CI/CD</span>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-header">
-        <div class="cs-ind"><div class="cs-ind-dot"></div>Music & Fitness Technology</div>
-        <div class="cs-client">Reflex Radio · reflex-radio.com</div>
-        <div class="cs-title">Apple Music integration that cut admin review time by over 50%</div>
-        <p class="cs-desc">Reflex Radio needed to integrate Apple Music streaming into their workout playlist app — processing 20,000 songs with accurate metadata, rebuilding their media player, and delivering a seamless user experience. The integration had to work invisibly in the background during live group fitness classes.</p>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric"><div class="cs-metric-n">50%+</div><div class="cs-metric-l">Less admin review time</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">75%</div><div class="cs-metric-l">Metadata accuracy on first hit</div></div>
-        <div class="cs-metric"><div class="cs-metric-n">20K</div><div class="cs-metric-l">Songs processed</div></div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section-title">The problem</div>
-        <p class="cs-section-text">20,000 songs needed accurate Apple Music metadata. The media player had to be rebuilt to stream from Apple Music while maintaining Reflex Radio's complex workout playlist logic — DJ effects, timing, energy levels, and genre matching.</p>
-        <div class="cs-section-title">The solution</div>
-        <p class="cs-section-text">We built a custom ranking algorithm that achieved 75% metadata accuracy on the first search hit, dramatically reducing manual review. We then rewrote the media player to integrate Apple Music streaming seamlessly behind the existing Reflex Radio UI.</p>
-        <div class="cs-section-title">The result</div>
-        <p class="cs-section-text">Admins spent more than 50% less time reviewing metadata. Reflex Radio relaunched with complete Apple Music integration — users could link accounts and control workout music in live group classes without any disruption to the experience.</p>
-      </div>
-      <div class="cs-tags">
-        <span class="cs-tag">Apple Music API</span><span class="cs-tag">iOS integration</span><span class="cs-tag">Algorithm design</span><span class="cs-tag">Media player</span><span class="cs-tag">API integration</span>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="divr">
-  <div class="dl"></div>
-  <svg viewBox="0 0 220 52" width="140" height="32" xmlns="http://www.w3.org/2000/svg" style="opacity:.3;">
-    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
-    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
-    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".5"/>
-    <line x1="19" y1="26" x2="31" y2="38" stroke="#0057FF" stroke-width="1.5" opacity=".5"/>
-    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
-    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
-    <circle cx="36" cy="42" r="5" fill="none" stroke="#0057FF" stroke-width="2"/>
-    <circle cx="36" cy="42" r="2.5" fill="#0057FF"/>
-    <line x1="41" y1="10" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
-    <line x1="41" y1="42" x2="50" y2="26" stroke="#0057FF" stroke-width="1.5" opacity=".4"/>
-    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#0d1b2a" letter-spacing="-0.5">C³S</text>
-  </svg>
-  <div class="dl"></div>
 </div>
-<section class="cta-section">
-  <div class="ctat">Want to see work relevant to your industry?</div>
-  <p class="ctasb">We have more engagements we can walk you through on a call — including longer-running partnerships we can't detail publicly.</p>
-  <div class="cta-btns">
-    <a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-white">Book a free 30-min call</a>
-    <a href="services.html" class="btn-outline-white">See our services</a>
+
+<section class="section">
+  <div class="lbl">Featured &middot; Most recent work</div>
+  <div class="stitle">Enterprise AI, live in production</div>
+  <p class="ssub">The hardest part of enterprise AI isn&#39;t the model. It&#39;s the integration, the context, and the trust.</p>
+
+  <div class="featured-cs">
+    <div class="fcs-top">
+      <span class="fcs-badge">Enterprise AI</span>
+      <span class="fcs-badge">Active engagement</span>
+      <span class="fcs-badge" style="background:rgba(255,255,255,.25);">4 agents in production</span>
+    </div>
+    <div class="fcs-body">
+      <div class="fcs-main">
+        <div class="fcs-title">Four AI agents built and running inside a large enterprise &#8212; from concept to production in six months</div>
+        <p class="fcs-summary">An enterprise client needed to transform how their support and engineering teams operated &#8212; using AI to automate case management, reduce manual monitoring, and accelerate development workflows. C3S embedded inside their organization and delivered four production AI agents integrated directly into their existing enterprise stack.</p>
+        <div class="fcs-built-lbl">What we built</div>
+        <ul class="fcs-list">
+          <li>Case Severity Agent &#8212; integrated with their CRM to automatically validate and correct support case prioritization, with ongoing re-evaluation as cases are updated</li>
+          <li>Case Chat Agent &#8212; conversational interface allowing teams to query the case management system in natural language, with real-time data retrieval</li>
+          <li>Developer Assistant &#8212; general-purpose AI assistant for code generation, debugging, and technical Q&amp;A, extensible with domain-specific data</li>
+          <li>Automated Monitoring Engineer &#8212; continuously analyzes alerts, logs, and network topology to recommend and apply remediations without human intervention</li>
+        </ul>
+      </div>
+      <div class="fcs-stats">
+        <div><div class="fcs-stat-n">6 mo</div><div class="fcs-stat-l">Concept to production</div></div>
+        <div><div class="fcs-stat-n">4</div><div class="fcs-stat-l">AI agents in production</div></div>
+        <div><div class="fcs-stat-n">100%</div><div class="fcs-stat-l">Client-owned output</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-section-lbl">Recent engagements</div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Cybersecurity</div>
+        <div class="cc-title">Domain Assessment Service that surfaces dark web exposure and DNS risks for enterprise clients</div>
+        <p class="cc-summary">A cybersecurity client needed a faster, more systematic way to assess external domain security risks &#8212; including credentials exposed on the dark web and visibility into DNS configuration details.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">Security teams were manually reviewing domain exposure with no unified view &#8212; slow, error-prone, and impossible to scale as their client base grew. Compromised credentials and DNS misconfigurations were being caught too late.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We deployed a Domain Assessment Service that automatically generates reports covering compromised credentials linked to the domain, dark web exposure findings, and full DNS record analysis &#8212; delivered on demand.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">The client gained rapid access to actionable security intelligence &#8212; identifying credential exposures and configuration risks early, improving response time and overall security posture.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">On demand</div><div class="cc-stat-l">Report generation &#8212; previously manual</div></div>
+        <div><div class="cc-stat-n">&#8593;</div><div class="cc-stat-l">Earlier risk identification across client base</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">Cybersecurity</span><span class="ctag">Dark Web Monitoring</span><span class="ctag">DNS Analysis</span><span class="ctag">Security Automation</span></div>
+  </div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Equipment &amp; SaaS</div>
+        <div class="cc-title">API enrichment with new equipment guide data &#8212; direct impact on a wide enterprise user base</div>
+        <p class="cc-summary">A SaaS client serving one of the world&#39;s largest equipment buyers needed to expand their API&#39;s guide information to cover additional equipment categories &#8212; directly affecting the functionality their largest customer relies on daily.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">The existing API lacked coverage for certain types of valuable guide data for equipment categories. This gap was limiting the utility of the platform for a wide enterprise user base and needed to be addressed at scale without disrupting live operations.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We enriched the client&#39;s APIs with new categories of equipment guide information &#8212; expanding coverage, improving data structure, and integrating cleanly with the existing platform architecture.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">The enriched API data directly and significantly expanded the capabilities available to their largest enterprise customer &#8212; broadening platform value across a wide user base.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">Wide</div><div class="cc-stat-l">User base directly impacted</div></div>
+        <div><div class="cc-stat-n">&#8593;</div><div class="cc-stat-l">Expanded platform value for largest enterprise customer</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">API Development</span><span class="ctag">Data Enrichment</span><span class="ctag">Enterprise SaaS</span><span class="ctag">Platform Integration</span></div>
+  </div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Legacy Modernization</div>
+        <div class="cc-title">Modern web application replaces legacy desktop software &#8212; dramatically improved UX and reporting</div>
+        <p class="cc-summary">A client was running business-critical operations on an outdated desktop application that was limiting productivity and frustrating users. They needed a full replacement &#8212; modern, web-based, and ready for a broad customer rollout.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">The legacy desktop application was difficult to use, difficult to maintain, and provided limited reporting visibility. Customers had grown frustrated with the experience, and the old system had no path to scale.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We designed and built a modern web application from the ground up &#8212; replacing the legacy desktop software with a clean, intuitive interface that improved ordering workflows and introduced insightful report generation.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">Dramatically improved user experience, faster and easier ordering, and meaningful reporting capabilities. Early adopters validated the approach ahead of full customer rollout.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">&#8593;</div><div class="cc-stat-l">User productivity and ordering speed</div></div>
+        <div><div class="cc-stat-n">Full</div><div class="cc-stat-l">Legacy desktop system replaced</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">Application Modernization</span><span class="ctag">Web Application</span><span class="ctag">UX Design</span><span class="ctag">Legacy Replacement</span></div>
+  </div>
+
+  <div class="cs-section-lbl">Previous engagements</div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Cybersecurity &middot; Confidential client</div>
+        <div class="cc-title">Cloud architecture to automate dark web scan execution at scale</div>
+        <p class="cc-summary">A cybersecurity client&#39;s dark web scanning service was running as manual scripts on local machines. As their customer base grew, the manual process became a bottleneck. C3S built a fully automated cloud-native solution on AWS.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">Security admins manually executed scripts and uploaded results &#8212; time-consuming, error-prone, and impossible to scale as the client base grew.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We built a serverless architecture using AWS Lambda to run scans simultaneously, centralized output storage in S3, and a real-time UI dashboard showing live scan logs over a secure socket connection.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">Security admins can now launch multiple dark web scans and generate client reports immediately upon completion &#8212; no file transfers, no manual steps.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">100%</div><div class="cc-stat-l">Process automated</div></div>
+        <div><div class="cc-stat-n">0</div><div class="cc-stat-l">Manual upload steps</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">AWS Lambda</span><span class="ctag">S3</span><span class="ctag">Serverless</span><span class="ctag">Real-time UI</span><span class="ctag">Cybersecurity</span></div>
+  </div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Electronics Distribution &amp; Supply Chain &middot; Confidential client</div>
+        <div class="cc-title">Fixing a slow, unresponsive system managing millions of supply chain records</div>
+        <p class="cc-summary">A global electronics distributor serving OEMs, military, and aerospace suppliers was running mission-critical software that had become dangerously slow &#8212; managing millions of database records 24/7.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">High data volume caused severe performance degradation. Slow response times were creating inefficiencies and threatening customer relationships on a global scale.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We optimized database indexing and SQL queries, introduced API paging to reduce data loads, and separated the warehouse data into a dedicated independent service with its own database and load balancing.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">A robust, scalable system capable of handling intensive data loads without performance compromise &#8212; with the architecture to grow as the client&#39;s business evolves.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">Millions</div><div class="cc-stat-l">Records optimized</div></div>
+        <div><div class="cc-stat-n">24/7</div><div class="cc-stat-l">Uptime required</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">Database optimization</span><span class="ctag">SQL</span><span class="ctag">Microservices</span><span class="ctag">Load balancing</span></div>
+  </div>
+
+  <div class="cc">
+    <div class="cc-inner">
+      <div class="cc-body">
+        <div class="cc-industry">Electronics Distribution &amp; Supply Chain &middot; Confidential client</div>
+        <div class="cc-title">Building a QA process from zero for a global supply chain platform</div>
+        <p class="cc-summary">One of the fastest-growing global independent electronics distributors had no software testing processes in place. Critical bugs were reaching production, disrupting operations and impacting their global client base.</p>
+        <div class="cc-sections">
+          <div><div class="cc-sec-lbl">The problem</div><p class="cc-sec-txt">No testing framework meant frequent critical-error releases that disrupted live operations, increased support costs, and damaged client confidence.</p></div>
+          <div><div class="cc-sec-lbl">What we built</div><p class="cc-sec-txt">We implemented manual testing for immediate stabilization, then systematically built an automated smoke testing pipeline prioritizing the most business-critical functions for every release.</p></div>
+          <div><div class="cc-sec-lbl">The result</div><p class="cc-sec-txt">A stable, reliable software system &#8212; significantly fewer production rollbacks, reduced support costs, and increased client confidence across a global customer base.</p></div>
+        </div>
+      </div>
+      <div class="cc-sidebar">
+        <div><div class="cc-stat-n">Zero</div><div class="cc-stat-l">Prior QA process</div></div>
+        <div><div class="cc-stat-n">&#8595;</div><div class="cc-stat-l">Critical errors in production</div></div>
+      </div>
+    </div>
+    <div class="cc-tags"><span class="ctag">QA automation</span><span class="ctag">Smoke testing</span><span class="ctag">CI/CD</span><span class="ctag">Quality engineering</span></div>
+  </div>
+
+  </div>
+
+
+</section><div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div><div class="cta-strip-t">Want to see work relevant to your industry?</div><div class="cta-strip-sub">We have more engagements we can walk you through on a call &#8212; including longer-running partnerships we can&#39;t detail publicly.</div></div>
+    <div class="cta-btns"><a href="https://calendly.com/pdonovan-c3s/30min" target="_blank" class="btn-white">Book a free 30-min call</a><a href="services.html" class="btn-outline-white">See our services</a></div>
+  </div>
+</div><section class="promise-strip">
+  <div class="promise-strip-inner">
+    <div class="ps-card"><div class="ps-icon teal">&#9675;</div><div><div class="ps-tag teal">Included at no cost</div><div class="ps-title">A dedicated Project Manager from day one</div><div class="ps-desc">Every C3S client gets a dedicated PM at no extra charge &#8212; your single point of contact for communication, updates, and day-to-day coordination. You always know where things stand.</div></div></div>
+    <div class="ps-card"><div class="ps-icon blue">&#9889;</div><div><div class="ps-tag blue">Our confidence guarantee</div><div class="ps-title">Not happy? Walk away in weeks &#8212; not months</div><div class="ps-desc">We don&#39;t lock you into long contracts. If we&#39;re not delivering to your standard, terminate with just a few weeks of notice. No penalties. We offer this because we back our work completely.</div></div></div>
   </div>
 </section>
 <footer>
   <svg viewBox="0 0 220 52" width="180" height="42" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/>
-    <circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
-    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/>
-    <line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
-    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/>
-    <circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
-    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/>
-    <circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
-    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
-    <line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
-    <text x="62" y="36" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
+    <circle cx="12" cy="26" r="7" fill="none" stroke="#0ABFBF" stroke-width="2.5"/><circle cx="12" cy="26" r="3" fill="#0ABFBF"/>
+    <line x1="19" y1="26" x2="31" y2="14" stroke="#0ABFBF" stroke-width="1.5" opacity=".6"/><line x1="19" y1="26" x2="31" y2="38" stroke="#4d8eff" stroke-width="1.5" opacity=".6"/>
+    <circle cx="36" cy="10" r="5" fill="none" stroke="#0ABFBF" stroke-width="2"/><circle cx="36" cy="10" r="2.5" fill="#0ABFBF"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="#4d8eff" stroke-width="2"/><circle cx="36" cy="42" r="2.5" fill="#4d8eff"/>
+    <line x1="41" y1="10" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/><line x1="41" y1="42" x2="50" y2="26" stroke="#4d8eff" stroke-width="1.5" opacity=".5"/>
+    <text x="62" y="36" font-family="Syne,sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="-0.5">C³S</text>
   </svg>
   <div class="fl">
-    <a href="services.html">Services</a>
-    <a href="ai-engineering.html">AI Engineering</a>
-    <a href="technologies.html">Technologies</a>
-    <a href="industries.html">Industries</a>
-    <a href="case-studies.html">Case Studies</a>
-    <a href="about.html">About</a>
+    <a href="services.html">Services</a><a href="ai-engineering.html">AI Engineering</a>
+    <a href="technologies.html">Technologies</a><a href="case-studies.html">Case Studies</a><a href="about.html">About</a>
   </div>
-  <a href="/privacy.html" style="font-size:12px;color:#4a5a6b;text-decoration:none;">Privacy Policy</a>
-  <div class="fc">© 2026 C3S Software · Cairo, Egypt · US-Facing Operations</div>
+  <a href="privacy.html" style="font-size:12px;color:#4a5a6b;text-decoration:none;">Privacy Policy</a>
+  <div class="fc">&#169; 2026 C3S Software &middot; Cairo, Egypt &middot; US-Facing Operations</div>
 </footer>
 </body>
 </html>
